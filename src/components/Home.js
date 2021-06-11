@@ -23,7 +23,7 @@ function Home() {
             Also, a large reason for creating this site was to provide a space
             to share my writings. My thoughts on what to write about are derived
             from my interests whether physical, intellectual, social, or mental.
-            I will write about ideas which help me live a positive life.
+            I will write about ideas which help me view the world.
           </Bio>
         </MattSection>
       </AboutSection>
