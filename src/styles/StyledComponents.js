@@ -26,8 +26,8 @@ export const OutsideLinks = styled.a`
 
 export const Description = styled.nav`
   text-align: left;
-  font-family: "Oswald", sans-serif;
-  padding: 0 0 0 10%;
+  font-family: "PT Sans Narrow", sans-serif;
+  padding: 0 0 0 12.5%;
   text-decoration: none;
 `;
 
@@ -37,12 +37,12 @@ export const NameLink = styled(Link)`
 `;
 
 export const Name = styled.h1`
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   color: #101010;
 `;
 
 export const Role = styled.h2`
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #101010;
 `;
 
@@ -54,7 +54,7 @@ export const Nav = styled.nav`
   /* position: fixed; */
   width: 100%;
   z-index: 100;
-  font-family: "Oswald", sans-serif;
+  font-family: "PT Sans Narrow", sans-serif;
   /* background: #f8f8ff; */
 `;
 
@@ -98,20 +98,21 @@ export const TooltipText = styled.div`
 
 export const AboutSection = styled.div`
   background: linear-gradient(60deg, #f7e7ce 20%, #f8f8ff 30%);
-  padding: 10% 0 0 0;
+  padding: 5% 10% 0 10%;
 `;
 
 export const Matt = styled.h2`
   width: 100%;
   padding: 0 0 3% 0;
-  font-family: "Oswald", sans-serif;
   font-size: 3rem;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: normal;
 `;
 
 export const MattSection = styled.div`
   display: flex;
-  margin: 0 10% 0 10%;
   padding: 0 0 5% 0%;
+  border-bottom: 1px black;
 `;
 
 export const ProfilePicture = styled.img`
@@ -123,7 +124,7 @@ export const ProfilePicture = styled.img`
 export const Bio = styled.p`
   justify-content: space-evenly;
   margin: 5% 0 0 10%;
-  font-family: "Oswald", sans-serif;
+  font-family: "PT Sans Narrow", sans-serif;
   font-size: 1.3rem;
 `;
 
@@ -133,9 +134,10 @@ export const ProjectsSection = styled.div`
 
 export const Projects = styled.h2`
   width: 100%;
-  padding: 0 0 3% 0;
-  font-family: "Oswald", sans-serif;
+  padding: 10% 0 3% 0;
+  font-family: "PT Sans Narrow", sans-serif;
   font-size: 3rem;
+  font-weight: normal;
 `;
 
 export const Button = styled.button`
