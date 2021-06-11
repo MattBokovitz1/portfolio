@@ -119,10 +119,22 @@ export const About = styled.h2`
   font-family: "Oswald", sans-serif;
 `;
 
+export const MattSection = styled.div`
+  display: flex;
+  margin: 0 10% 0 10%;
+`;
+
 export const ProfilePicture = styled.img`
   border-radius: 50%;
-  width: 300px;
-  margin: 0 50% 0 0;
+  width: 275px;
+  justify-content: space-evenly;
+`;
+
+export const Bio = styled.p`
+  justify-content: space-evenly;
+  margin: 5% 0 0 10%;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.3rem;
 `;
 
 export const Logo = styled.div`
