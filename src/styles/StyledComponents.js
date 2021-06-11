@@ -13,14 +13,6 @@ export const Links = styled(Link)`
   justify-content: center;
   align-items: center;
   font-size: 2rem;
-  &:hover {
-    margin: 15% 0 15% 0;
-    border-radius: 50%;
-    border: 1px #f8f4ff;
-    background: #f8ffa8;
-    color: #101010;
-    transition: opacity 300ms;
-  }
 `;
 
 export const OutsideLinks = styled.a`
@@ -30,13 +22,6 @@ export const OutsideLinks = styled.a`
   justify-content: center;
   align-items: center;
   font-size: 2rem;
-  &:hover {
-    border: 1px #f8f4ff;
-    margin: 15% 0 15% 0;
-    border-radius: 50%;
-    background: #f8ffa8;
-    transition: opacity 300ms;
-  }
 `;
 
 export const Description = styled.nav`
@@ -52,25 +37,25 @@ export const NameLink = styled(Link)`
 `;
 
 export const Name = styled.h1`
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   color: #101010;
 `;
 
 export const Role = styled.h2`
-  font-size: 1.25rem;
+  font-size: 1rem;
   color: #101010;
 `;
 
 export const Nav = styled.nav`
-  margin: 0%;
+  margin: 0;
   display: flex;
   justify-content: space-between;
   text-decoration: none;
-  position: fixed;
+  /* position: fixed; */
   width: 100%;
   z-index: 100;
   font-family: "Oswald", sans-serif;
-  background: #f8f8ff;
+  /* background: #f8f8ff; */
 `;
 
 export const LinksDiv = styled.div`
@@ -87,16 +72,10 @@ export const LinksDiv = styled.div`
   }
 `;
 
-export const H1 = styled.h1`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: Blue;
-  padding: 10%;
-
-  @media (max-width: 500px) {
-    display: none;
-  }
+export const FrontPicture = styled.img`
+  padding: 5% 0 3% 0;
+  width: 75%;
+  height: 60vh;
 `;
 
 export const Tooltip = styled.div`
@@ -118,14 +97,15 @@ export const TooltipText = styled.div`
 `;
 
 export const AboutSection = styled.div`
-  background: linear-gradient(60deg, #f8ffa8 20%, #f8f8ff 30%);
-  padding: 15% 0 0 0;
+  background: linear-gradient(60deg, #f7e7ce 20%, #f8f8ff 30%);
+  padding: 10% 0 0 0;
 `;
 
-export const About = styled.h2`
+export const Matt = styled.h2`
   width: 100%;
-  padding: 0 0 5% 0;
+  padding: 0 0 3% 0;
   font-family: "Oswald", sans-serif;
+  font-size: 3rem;
 `;
 
 export const MattSection = styled.div`
@@ -147,7 +127,16 @@ export const Bio = styled.p`
   font-size: 1.3rem;
 `;
 
-export const ProjectsSection = styled.div``;
+export const ProjectsSection = styled.div`
+  background: #f8f8ff;
+`;
+
+export const Projects = styled.h2`
+  width: 100%;
+  padding: 0 0 3% 0;
+  font-family: "Oswald", sans-serif;
+  font-size: 3rem;
+`;
 
 export const Button = styled.button`
   display: inline-block;

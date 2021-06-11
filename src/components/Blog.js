@@ -1,8 +1,8 @@
 import React from "react";
-import { About } from "../styles/StyledComponents";
+import { Matt } from "../styles/StyledComponents";
 
 function Blog() {
-  return <About>Coming Soon!</About>;
+  return <Matt>Coming Soon!</Matt>;
 }
 
 export default Blog;
