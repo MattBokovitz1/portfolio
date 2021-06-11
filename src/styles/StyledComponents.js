@@ -14,10 +14,10 @@ export const Links = styled(Link)`
   align-items: center;
   font-size: 2rem;
   &:hover {
-    margin: 15% 0 10% 0;
+    margin: 15% 0 15% 0;
     border-radius: 50%;
     border: 1px #f8f4ff;
-    background: #f8f4ff;
+    background: #f8ffa8;
     color: #101010;
     transition: opacity 300ms;
   }
@@ -32,9 +32,9 @@ export const OutsideLinks = styled.a`
   font-size: 2rem;
   &:hover {
     border: 1px #f8f4ff;
-    margin: 15% 0 10% 0;
+    margin: 15% 0 15% 0;
     border-radius: 50%;
-    background: #f8f4ff;
+    background: #f8ffa8;
     transition: opacity 300ms;
   }
 `;
@@ -62,22 +62,25 @@ export const Role = styled.h2`
 `;
 
 export const Nav = styled.nav`
+  margin: 0%;
   display: flex;
   justify-content: space-between;
   text-decoration: none;
   position: fixed;
-  width: 95%;
+  width: 100%;
   z-index: 100;
   font-family: "Oswald", sans-serif;
+  background: #f8f8ff;
 `;
 
 export const LinksDiv = styled.div`
   display: flex;
   justify-content: space-around;
-  width: 30%;
+  width: 32%;
   font-size: 1rem;
   color: black;
   text-decoration: none;
+  padding: 0 5% 0 0;
 
   @media (max-width: 500px) {
     width: 50%;
@@ -114,16 +117,21 @@ export const TooltipText = styled.div`
   font-family: "Oswald", sans-serif;
 `;
 
-export const AboutSection = styled.div``;
+export const AboutSection = styled.div`
+  background: linear-gradient(60deg, #f8ffa8 20%, #f8f8ff 30%);
+  padding: 15% 0 0 0;
+`;
 
 export const About = styled.h2`
-  padding: 15% 0 5% 0;
+  width: 100%;
+  padding: 0 0 5% 0;
   font-family: "Oswald", sans-serif;
 `;
 
 export const MattSection = styled.div`
   display: flex;
   margin: 0 10% 0 10%;
+  padding: 0 0 5% 0%;
 `;
 
 export const ProfilePicture = styled.img`
@@ -139,40 +147,7 @@ export const Bio = styled.p`
   font-size: 1.3rem;
 `;
 
-export const Logo = styled.div`
-  display: flex;
-  width: 15%;
-`;
-
-// SignUp
-
-export const Header = styled.h2`
-  font-size: 3rem;
-  margin-bottom: 3%;
-  padding: 0% 0% 1% 0%;
-  color: #92817a;
-`;
-
-export const Input = styled.input`
-  font-size: 1rem;
-  margin: 0.5% 0% 0.5% 0%;
-  border-radius: 5%;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  @media (max-width: 500px) {
-    font-size: 1rem;
-  }
-`;
-
-export const Footers = styled.div`
-  position: fixed;
-  background: black;
-  z-index: 100;
-  margin: 30% 20% 0 0;
-`;
-
-// Login
+export const ProjectsSection = styled.div``;
 
 export const Button = styled.button`
   display: inline-block;
@@ -197,49 +172,4 @@ export const Quote = styled.div`
   @media (max-width: 500px) {
     display: none;
   }
-`;
-
-// MyPlants
-
-export const H3 = styled.h3`
-  font-size: 2rem;
-  color: white;
-`;
-
-export const Paragraph = styled.p`
-  font-size: 1.5rem;
-  color: white;
-  padding: 0% 1% 0 0.5%;
-`;
-
-export const StyledPage = styled.div`
-  position: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  justify-content: center;
-  align-items: center;
-  width: 35%;
-  height: 100%;
-  margin: 5% 0 0 0;
-`;
-
-export const StyledHeader = styled.h1`
-  display: flex;
-  flex-wrap: wrap;
-  text-align: center;
-  padding-right: 1rem;
-  align-items: center;
-  color: white;
-  margin-left: 20%;
-  font-size: 1.7rem;
-  font-weight: 450;
-  justify-items: center;
-  margin-top: 15%;
-  width: 75%;
-`;
-
-export const Span = styled.span`
-  font-weight: bolder;
-  color: white;
-  border-bottom: 2px solid white;
 `;

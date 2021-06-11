@@ -5,6 +5,7 @@ import {
   Bio,
   MattSection,
   AboutSection,
+  ProjectsSection,
 } from "../styles/StyledComponents";
 import matt from "../assets/Matt.png";
 
@@ -27,6 +28,7 @@ function Home() {
           </Bio>
         </MattSection>
       </AboutSection>
+      <ProjectsSection></ProjectsSection>
     </>
   );
 }
