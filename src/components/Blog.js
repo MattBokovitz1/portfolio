@@ -1,8 +1,8 @@
 import React from "react";
-import { H1 } from "../styles/StyledComponents";
+import { About } from "../styles/StyledComponents";
 
 function Blog() {
-  return <H1>Blog</H1>;
+  return <About>Coming Soon!</About>;
 }
 
 export default Blog;

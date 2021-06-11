@@ -114,6 +114,8 @@ export const TooltipText = styled.div`
   font-family: "Oswald", sans-serif;
 `;
 
+export const AboutSection = styled.div``;
+
 export const About = styled.h2`
   padding: 15% 0 5% 0;
   font-family: "Oswald", sans-serif;
