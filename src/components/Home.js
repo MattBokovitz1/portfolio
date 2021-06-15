@@ -9,12 +9,12 @@ import {
   FrontPicture,
 } from "../styles/StyledComponents";
 import matt from "../assets/Matt.png";
-import teamwork from "../assets/front.jpg";
+import front from "../assets/front.jpg";
 
 function Home() {
   return (
     <>
-      <FrontPicture src={teamwork}></FrontPicture>
+      <FrontPicture src={front}></FrontPicture>
       <AboutSection>
         <Matt>Matt Bokovitz</Matt>
         <MattSection>
