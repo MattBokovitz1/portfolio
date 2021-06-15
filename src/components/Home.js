@@ -1,34 +1,38 @@
 import React from "react";
 import {
-  About,
+  Projects,
   ProfilePicture,
   Bio,
   MattSection,
   AboutSection,
-  ProjectsSection,
+  Matt,
+  FrontPicture,
 } from "../styles/StyledComponents";
 import matt from "../assets/Matt.png";
+import front from "../assets/front.jpg";
 
 function Home() {
   return (
     <>
+      <FrontPicture src={front}></FrontPicture>
       <AboutSection>
-        <About>About Me</About>
+        <Matt>Matt Bokovitz</Matt>
         <MattSection>
           <ProfilePicture src={matt} alt="Profile Picture" />
           <Bio>
-            I am a Web Developer in Philadelphia, PA. My current tech stack
-            includes React.js and Node.js. I enjoy making websites with clean
-            and navigable designs. I also enjoy building community! <br></br>
+            I'm passionate about innovation and driven by impact. <br></br>
+            <br></br>I am a Web Developer in Philadelphia, PA. My current tech
+            stack includes React.js and Node.js. I enjoy making websites with
+            clean and easily navigable designs.
+            <br></br>
             <br></br>
             Also, a large reason for creating this site was to provide a space
-            to share my writings. My thoughts on what to write about are derived
-            from my interests whether physical, intellectual, social, or mental.
-            I will write about ideas which help me view the world.
+            to share my writing. I plan on writing about ideas and bits of life
+            that have shaped how I view the world in an appreciative manner.
           </Bio>
         </MattSection>
+        <Projects>Projects</Projects>
       </AboutSection>
-      <ProjectsSection></ProjectsSection>
     </>
   );
 }
