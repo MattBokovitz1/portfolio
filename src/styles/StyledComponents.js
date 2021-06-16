@@ -107,6 +107,7 @@ export const Matt = styled.h2`
   font-size: 3rem;
   font-family: "PT Sans Narrow", sans-serif;
   font-weight: normal;
+  color: #101010;
 `;
 
 export const MattSection = styled.div`
@@ -126,18 +127,56 @@ export const Bio = styled.p`
   margin: 5% 0 0 10%;
   font-family: "PT Sans Narrow", sans-serif;
   font-size: 1.3rem;
+  color: #101010;
 `;
 
 export const ProjectsSection = styled.div`
   background: #f8f8ff;
+  margin: 0 0 10% 0;
 `;
 
 export const Projects = styled.h2`
   width: 100%;
-  padding: 10% 0 3% 0;
+  padding: 10% 0 8% 0;
   font-family: "PT Sans Narrow", sans-serif;
   font-size: 3rem;
   font-weight: normal;
+  color: #101010;
+`;
+
+export const ProjectTitle = styled.h3`
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 2rem;
+  font-weight: normal;
+  color: #101010;
+`;
+
+export const ProjectDescription = styled.p`
+  justify-content: space-evenly;
+  margin: 5% 0 0 10%;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 1.3rem;
+  color: #101010;
+`;
+
+export const IndividualProject = styled.div`
+  display: flex;
+  padding: 0 0 15% 0%;
+  border-bottom: 1px black;
+`;
+
+export const RightProject = styled.div`
+  justify-content: space-evenly;
+  margin: 0% 0 0 10%;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 1.3rem;
+  text-align: center;
+  color: #101010;
+`;
+
+export const ProjectImg = styled.img`
+  width: 38%;
+  justify-content: space-evenly;
 `;
 
 export const Button = styled.button`
