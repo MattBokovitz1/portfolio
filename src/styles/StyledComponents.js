@@ -206,7 +206,6 @@ export const Quote = styled.div`
 
 export const Bottom = styled.div`
   padding: 10% 0 0 0;
-  background: #f8f8ff;
   font-size: 2rem;
   font-family: "PT Sans Narrow", sans-serif;
 `;
