@@ -7,9 +7,18 @@ import {
   AboutSection,
   Matt,
   FrontPicture,
+  ProjectTitle,
+  ProjectDescription,
+  IndividualProject,
+  ProjectImg,
+  RightProject,
+  OutsideLinks,
 } from "../styles/StyledComponents";
 import matt from "../assets/Matt.png";
 import front from "../assets/front.jpg";
+import plant from "../assets/plants.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 function Home() {
   return (
@@ -32,6 +41,21 @@ function Home() {
           </Bio>
         </MattSection>
         <Projects>Projects</Projects>
+        <IndividualProject>
+          <ProjectImg src={plant} alt="Water My Plants App"></ProjectImg>
+          <RightProject>
+            <ProjectTitle>Water My Plants</ProjectTitle>
+            <ProjectDescription>
+              React Web application that catalogues a user's plants and provides
+              details on when to water. Allows user to add, edit, and delete
+              plant information when logged into profile.<br></br>
+              <br></br>
+              <OutsideLinks href="https://github.com/Build-Wk-Water-My-Plants/front-end">
+                <FontAwesomeIcon icon={faGithub} />
+              </OutsideLinks>
+            </ProjectDescription>
+          </RightProject>
+        </IndividualProject>
       </AboutSection>
     </>
   );
