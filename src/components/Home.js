@@ -11,7 +11,7 @@ import {
   ProjectDescription,
   IndividualProject,
   ProjectImg,
-  RightProject,
+  LeftProject,
   OutsideLinks,
 } from "../styles/StyledComponents";
 import matt from "../assets/Matt.png";
@@ -42,19 +42,19 @@ function Home() {
         </MattSection>
         <Projects>Projects</Projects>
         <IndividualProject>
-          <ProjectImg src={plant} alt="Water My Plants App"></ProjectImg>
-          <RightProject>
+          <LeftProject>
             <ProjectTitle>Water My Plants</ProjectTitle>
             <ProjectDescription>
-              React Web application that catalogues a user's plants and provides
-              details on when to water. Allows user to add, edit, and delete
-              plant information when logged into profile.<br></br>
+              React Web application that catalogues a user's plants. Allows user
+              to add, edit, and delete plant information when logged into
+              profile.<br></br>
               <br></br>
               <OutsideLinks href="https://github.com/Build-Wk-Water-My-Plants/front-end">
                 <FontAwesomeIcon icon={faGithub} />
               </OutsideLinks>
             </ProjectDescription>
-          </RightProject>
+          </LeftProject>
+          <ProjectImg src={plant} alt="Water My Plants App"></ProjectImg>
         </IndividualProject>
       </AboutSection>
     </>

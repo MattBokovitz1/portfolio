@@ -147,13 +147,13 @@ export const Projects = styled.h2`
 export const ProjectTitle = styled.h3`
   font-family: "PT Sans Narrow", sans-serif;
   font-size: 2rem;
-  font-weight: normal;
+  margin: 0 0 0 5%;
+  font-weight: bold;
   color: #101010;
 `;
 
 export const ProjectDescription = styled.p`
-  justify-content: space-evenly;
-  margin: 5% 0 0 10%;
+  margin: 5% 0 10% 0;
   font-family: "PT Sans Narrow", sans-serif;
   font-size: 1.3rem;
   color: #101010;
@@ -165,9 +165,9 @@ export const IndividualProject = styled.div`
   border-bottom: 1px black;
 `;
 
-export const RightProject = styled.div`
+export const LeftProject = styled.div`
   justify-content: space-evenly;
-  margin: 0% 0 0 10%;
+  margin: 5% 10% 0 0;
   font-family: "PT Sans Narrow", sans-serif;
   font-size: 1.3rem;
   text-align: center;
@@ -175,7 +175,7 @@ export const RightProject = styled.div`
 `;
 
 export const ProjectImg = styled.img`
-  width: 38%;
+  width: 50%;
   justify-content: space-evenly;
 `;
 
