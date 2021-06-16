@@ -17,6 +17,7 @@ import {
 import matt from "../assets/Matt.png";
 import front from "../assets/front.jpg";
 import plant from "../assets/plants.png";
+import nasa from "../assets/nasa.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
@@ -55,6 +56,20 @@ function Home() {
             </ProjectDescription>
           </LeftProject>
           <ProjectImg src={plant} alt="Water My Plants App"></ProjectImg>
+        </IndividualProject>
+        <IndividualProject>
+          <LeftProject>
+            <ProjectTitle>NASA Photo Of Day</ProjectTitle>
+            <ProjectDescription>
+              React Web application that allows user to select the NASA photo of
+              the day and view the photo and description.<br></br>
+              <br></br>
+              <OutsideLinks href="https://github.com/MattBokovitz1/nasa-photo-of-the-day">
+                <FontAwesomeIcon icon={faGithub} />
+              </OutsideLinks>
+            </ProjectDescription>
+          </LeftProject>
+          <ProjectImg src={nasa} alt="NASA photo of day app"></ProjectImg>
         </IndividualProject>
       </AboutSection>
     </>

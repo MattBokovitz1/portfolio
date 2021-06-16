@@ -161,7 +161,7 @@ export const ProjectDescription = styled.p`
 
 export const IndividualProject = styled.div`
   display: flex;
-  padding: 0 0 15% 0%;
+  padding: 0 0 20% 0%;
   border-bottom: 1px black;
 `;
 
@@ -202,4 +202,11 @@ export const Quote = styled.div`
   @media (max-width: 500px) {
     display: none;
   }
+`;
+
+export const Bottom = styled.div`
+  padding: 10% 0 0 0;
+  background: #f8f8ff;
+  font-size: 2rem;
+  font-family: "PT Sans Narrow", sans-serif;
 `;
