@@ -180,17 +180,16 @@ export const Projects = styled.h2`
   font-size: 3rem;
   font-weight: normal;
   color: #101010;
+  @media (max-width: 500px) {
+    margin: 5% 0 5% 0;
+  }
 `;
 
 export const ProjectTitle = styled.h3`
   font-family: "PT Sans Narrow", sans-serif;
   font-size: 2rem;
-  margin: 0 0 0 5%;
   font-weight: bold;
   color: #101010;
-  @media (max-width: 500px) {
-    margin: 0;
-  }
 `;
 
 export const ProjectDescription = styled.p`
@@ -200,7 +199,7 @@ export const ProjectDescription = styled.p`
   color: #101010;
 `;
 
-export const ProfileLinks = styled.a`
+export const ProjectLinks = styled.a`
   text-decoration: none;
   color: #101010;
   display: flex;
