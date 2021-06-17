@@ -75,7 +75,7 @@ export const FrontPicture = styled.img`
   padding: 5% 0 3% 0;
   width: 75%;
   height: 60vh;
-  @media (max-width: 500px) {
+  @media (max-width: 800px) {
     display: none;
   }
 `;
@@ -110,7 +110,7 @@ export const Matt = styled.h2`
   font-family: "PT Sans Narrow", sans-serif;
   font-weight: normal;
   color: #101010;
-  @media (max-width: 500px) {
+  @media (max-width: 800px) {
     display: none;
   }
 `;
@@ -119,7 +119,7 @@ export const MattSection = styled.div`
   display: flex;
   padding: 0 0 5% 0%;
   border-bottom: 1px black;
-  @media (max-width: 500px) {
+  @media (max-width: 800px) {
     display: block;
   }
 `;
@@ -137,17 +137,17 @@ export const ProfilePicture = styled.img`
   border-radius: 50%;
   width: 375px;
   justify-content: space-evenly;
+
+  @media (max-width: 800px) {
+    width: 40%;
+    height: 40%;
+    justify-content: center;
+  }
   @media (max-width: 500px) {
     width: 90%;
     height: 30%;
     border-radius: 10%;
     margin: 5% 0 0 0;
-  }
-
-  @media (max-width: 800px) {
-    width: 50%;
-    height: 30%;
-    justify-content: center;
   }
 `;
 
@@ -158,7 +158,7 @@ export const Bio = styled.p`
   font-size: 1.3rem;
   color: #101010;
   text-align: left;
-  @media (max-width: 500px) {
+  @media (max-width: 800px) {
     margin: 5% 0 0 0;
     text-align: center;
   }
