@@ -117,10 +117,11 @@ export const Matt = styled.h2`
 
 export const MattSection = styled.div`
   display: flex;
-  padding: 0 0 5% 0%;
+  padding: 0 0 5% 5%;
   border-bottom: 1px black;
   @media (max-width: 800px) {
     display: block;
+    padding: 0;
   }
 `;
 
@@ -174,7 +175,7 @@ export const ProjectsSection = styled.div`
 
 export const Projects = styled.h2`
   width: 100%;
-  padding: 10% 0 8% 0;
+  padding: 5% 0 8% 0;
   font-family: "PT Sans Narrow", sans-serif;
   font-size: 3rem;
   font-weight: normal;
