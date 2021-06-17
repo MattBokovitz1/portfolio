@@ -22,6 +22,9 @@ export const OutsideLinks = styled.a`
   justify-content: center;
   align-items: center;
   font-size: 2rem;
+  @media (max-width: 500px) {
+    display: none;
+  }
 `;
 
 export const Description = styled.nav`
@@ -65,17 +68,16 @@ export const LinksDiv = styled.div`
   font-size: 1rem;
   color: black;
   text-decoration: none;
-  padding: 0 5% 0 0;
-
-  @media (max-width: 500px) {
-    width: 50%;
-  }
+  padding: 0 5% 0 30%;
 `;
 
 export const FrontPicture = styled.img`
   padding: 5% 0 3% 0;
   width: 75%;
   height: 60vh;
+  @media (max-width: 500px) {
+    display: none;
+  }
 `;
 
 export const Tooltip = styled.div`
@@ -108,18 +110,38 @@ export const Matt = styled.h2`
   font-family: "PT Sans Narrow", sans-serif;
   font-weight: normal;
   color: #101010;
+  @media (max-width: 500px) {
+    display: none;
+  }
 `;
 
 export const MattSection = styled.div`
   display: flex;
   padding: 0 0 5% 0%;
   border-bottom: 1px black;
+  @media (max-width: 500px) {
+    display: block;
+  }
+`;
+
+export const BlogTitle = styled.h2`
+  width: 100%;
+  padding: 0 0 3% 0;
+  font-size: 3rem;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: normal;
+  color: #101010;
 `;
 
 export const ProfilePicture = styled.img`
   border-radius: 50%;
   width: 275px;
   justify-content: space-evenly;
+  @media (max-width: 500px) {
+    width: 90%;
+    height: 30%;
+    border-radius: 10%;
+  }
 `;
 
 export const Bio = styled.p`
@@ -133,6 +155,9 @@ export const Bio = styled.p`
 export const ProjectsSection = styled.div`
   background: #f8f8ff;
   margin: 0 0 10% 0;
+  @media (max-width: 500px) {
+    display: block;
+  }
 `;
 
 export const Projects = styled.h2`
@@ -163,6 +188,9 @@ export const IndividualProject = styled.div`
   display: flex;
   padding: 0 0 20% 0%;
   border-bottom: 1px black;
+  @media (max-width: 500px) {
+    display: block;
+  }
 `;
 
 export const LeftProject = styled.div`
@@ -177,6 +205,9 @@ export const LeftProject = styled.div`
 export const ProjectImg = styled.img`
   width: 50%;
   justify-content: space-evenly;
+  @media (max-width: 500px) {
+    width: 80%;
+  }
 `;
 
 export const Button = styled.button`
