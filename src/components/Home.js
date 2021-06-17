@@ -12,7 +12,7 @@ import {
   IndividualProject,
   ProjectImg,
   LeftProject,
-  OutsideLinks,
+  ProfileLinks,
 } from "../styles/StyledComponents";
 import matt from "../assets/Matt.png";
 import front from "../assets/front.jpg";
@@ -50,9 +50,9 @@ function Home() {
               to add, edit, and delete plant information when logged into
               profile.<br></br>
               <br></br>
-              <OutsideLinks href="https://github.com/Build-Wk-Water-My-Plants/front-end">
+              <ProfileLinks href="https://github.com/Build-Wk-Water-My-Plants/front-end">
                 <FontAwesomeIcon icon={faGithub} />
-              </OutsideLinks>
+              </ProfileLinks>
             </ProjectDescription>
           </LeftProject>
           <ProjectImg src={plant} alt="Water My Plants App"></ProjectImg>
@@ -64,9 +64,9 @@ function Home() {
               React Web application that allows user to select the NASA photo of
               the day and view the photo and description.<br></br>
               <br></br>
-              <OutsideLinks href="https://github.com/MattBokovitz1/nasa-photo-of-the-day">
+              <ProfileLinks href="https://github.com/MattBokovitz1/nasa-photo-of-the-day">
                 <FontAwesomeIcon icon={faGithub} />
-              </OutsideLinks>
+              </ProfileLinks>
             </ProjectDescription>
           </LeftProject>
           <ProjectImg src={nasa} alt="NASA photo of day app"></ProjectImg>
