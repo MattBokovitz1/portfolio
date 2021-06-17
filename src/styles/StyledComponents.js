@@ -150,6 +150,9 @@ export const Bio = styled.p`
   font-family: "PT Sans Narrow", sans-serif;
   font-size: 1.3rem;
   color: #101010;
+  @media (max-width: 500px) {
+    margin: 5% 0 0 0;
+  }
 `;
 
 export const ProjectsSection = styled.div`
@@ -175,6 +178,9 @@ export const ProjectTitle = styled.h3`
   margin: 0 0 0 5%;
   font-weight: bold;
   color: #101010;
+  @media (max-width: 500px) {
+    margin: 0;
+  }
 `;
 
 export const ProjectDescription = styled.p`
@@ -200,6 +206,9 @@ export const LeftProject = styled.div`
   font-size: 1.3rem;
   text-align: center;
   color: #101010;
+  @media (max-width: 500px) {
+    margin: 0;
+  }
 `;
 
 export const ProjectImg = styled.img`
@@ -239,4 +248,7 @@ export const Bottom = styled.div`
   padding: 10% 0 0 0;
   font-size: 2rem;
   font-family: "PT Sans Narrow", sans-serif;
+  @media (max-width: 500px) {
+    display: none;
+  }
 `;
