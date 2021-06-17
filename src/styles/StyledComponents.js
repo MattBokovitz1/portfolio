@@ -141,6 +141,13 @@ export const ProfilePicture = styled.img`
     width: 90%;
     height: 30%;
     border-radius: 10%;
+    margin: 5% 0 0 0;
+  }
+
+  @media (max-width: 800px) {
+    width: 50%;
+    height: 30%;
+    justify-content: center;
   }
 `;
 
@@ -153,6 +160,7 @@ export const Bio = styled.p`
   text-align: left;
   @media (max-width: 500px) {
     margin: 5% 0 0 0;
+    text-align: center;
   }
 `;
 
