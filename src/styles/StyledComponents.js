@@ -222,10 +222,11 @@ export const LeftProject = styled.div`
   margin: 5% 10% 0 0;
   font-family: "PT Sans Narrow", sans-serif;
   font-size: 1.3rem;
-  text-align: center;
+  text-align: left;
   color: #101010;
   @media (max-width: 500px) {
     margin: 0;
+    text-align: center;
   }
 `;
 
