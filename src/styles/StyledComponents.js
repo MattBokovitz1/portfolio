@@ -135,7 +135,7 @@ export const BlogTitle = styled.h2`
 
 export const ProfilePicture = styled.img`
   border-radius: 50%;
-  width: 275px;
+  width: 375px;
   justify-content: space-evenly;
   @media (max-width: 500px) {
     width: 90%;
@@ -146,10 +146,11 @@ export const ProfilePicture = styled.img`
 
 export const Bio = styled.p`
   justify-content: space-evenly;
-  margin: 5% 0 0 10%;
+  margin: 5% 5% 0 10%;
   font-family: "PT Sans Narrow", sans-serif;
   font-size: 1.3rem;
   color: #101010;
+  text-align: left;
   @media (max-width: 500px) {
     margin: 5% 0 0 0;
   }
