@@ -190,6 +190,15 @@ export const ProjectDescription = styled.p`
   color: #101010;
 `;
 
+export const ProfileLinks = styled.a`
+  text-decoration: none;
+  color: #101010;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+`;
+
 export const IndividualProject = styled.div`
   display: flex;
   padding: 0 0 20% 0%;
