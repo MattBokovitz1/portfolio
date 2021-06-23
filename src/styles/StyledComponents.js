@@ -99,7 +99,7 @@ export const TooltipText = styled.div`
 `;
 
 export const AboutSection = styled.div`
-  background: linear-gradient(60deg, #f7e7ce 20%, #f8f8ff 30%);
+  background: #f8f8ff;
   padding: 5% 10% 0 10%;
 `;
 
@@ -181,7 +181,7 @@ export const Projects = styled.h2`
   font-weight: normal;
   color: #101010;
   @media (max-width: 500px) {
-    margin: 5% 0 5% 0;
+    display: none;
   }
 `;
 
@@ -258,6 +258,14 @@ export const Quote = styled.div`
   width: 50%;
   margin: 5% 30% 0 25%;
   text-align: center;
+  @media (max-width: 500px) {
+    display: none;
+  }
+`;
+
+export const Sailboat = styled.img`
+  width: 100%;
+  height: 400px;
   @media (max-width: 500px) {
     display: none;
   }
