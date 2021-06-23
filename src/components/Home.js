@@ -18,6 +18,7 @@ import matt from "../assets/Matt.png";
 import front from "../assets/front.jpg";
 import plant from "../assets/plants.png";
 import nasa from "../assets/nasa.png";
+import exercise from "../assets/exercise-shop.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
@@ -41,7 +42,24 @@ function Home() {
             that have shaped how I view the world in an appreciative manner.
           </Bio>
         </MattSection>
+
         <Projects>Projects</Projects>
+        <IndividualProject>
+          <LeftProject>
+            <ProjectTitle>Exercise Shop</ProjectTitle>
+            <ProjectDescription>
+              A react app designed to be a store to purchase your favorite
+              workout gear. Included front page with lists of items, a shopping
+              cart, and a checkout form.
+              <br></br>
+              <br></br>
+              <ProjectLinks href="https://github.com/MattBokovitz1/workout-store">
+                <FontAwesomeIcon icon={faGithub} />
+              </ProjectLinks>
+            </ProjectDescription>
+          </LeftProject>
+          <ProjectImg src={exercise} alt="Exercise Shop App"></ProjectImg>
+        </IndividualProject>
         <IndividualProject>
           <LeftProject>
             <ProjectTitle>Water My Plants</ProjectTitle>
