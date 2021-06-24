@@ -216,7 +216,6 @@ export const IndividualProject = styled.div`
   @media (max-width: 500px) {
     display: block;
     padding: 5% 0 0 0;
-    margin: 0 0 0 3%;
     border-bottom: 1px solid black;
   }
 `;
