@@ -216,6 +216,8 @@ export const IndividualProject = styled.div`
   @media (max-width: 500px) {
     display: block;
     padding: 5% 0 0 0;
+    margin: 0 0 0 3%;
+    border-bottom: 1px solid black;
   }
 `;
 
@@ -237,6 +239,7 @@ export const ProjectImg = styled.img`
   justify-content: space-evenly;
   @media (max-width: 500px) {
     width: 80%;
+    margin: 0 0 5% 0;
   }
 `;
 
@@ -278,6 +281,6 @@ export const Bottom = styled.div`
   font-size: 2rem;
   font-family: "PT Sans Narrow", sans-serif;
   @media (max-width: 500px) {
-    display: none;
+    font-size: 1rem;
   }
 `;
