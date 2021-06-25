@@ -222,7 +222,7 @@ export const IndividualProject = styled.div`
 
 export const LeftProject = styled.div`
   justify-content: space-evenly;
-  margin: 5% 10% 0 0;
+  margin: 0 10% 0 0;
   font-family: "PT Sans Narrow", sans-serif;
   font-size: 1.3rem;
   text-align: left;
@@ -236,7 +236,10 @@ export const LeftProject = styled.div`
 export const ProjectImg = styled.img`
   width: 50%;
   justify-content: space-evenly;
+  align-content: center;
+
   @media (max-width: 500px) {
+    height: auto;
     width: 80%;
     margin: 0 0 5% 0;
   }
