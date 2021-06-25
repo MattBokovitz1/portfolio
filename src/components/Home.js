@@ -69,6 +69,20 @@ function Home() {
         </IndividualProject>
         <IndividualProject>
           <LeftProject>
+            <ProjectTitle>NASA Photo Of Day</ProjectTitle>
+            <ProjectDescription>
+              React Web application that allows user to select the NASA photo of
+              the day and view the photo and description.<br></br>
+              <br></br>
+              <ProjectLinks href="https://github.com/MattBokovitz1/nasa-photo-of-the-day">
+                <FontAwesomeIcon icon={faGithub} />
+              </ProjectLinks>
+            </ProjectDescription>
+          </LeftProject>
+          <ProjectImg src={nasa} alt="NASA photo of day app"></ProjectImg>
+        </IndividualProject>
+        <IndividualProject>
+          <LeftProject>
             <ProjectTitle>Exercise Shop</ProjectTitle>
             <ProjectDescription>
               A react app designed to be a store to purchase your favorite
@@ -97,20 +111,6 @@ function Home() {
             </ProjectDescription>
           </LeftProject>
           <ProjectImg src={plant} alt="Water My Plants App"></ProjectImg>
-        </IndividualProject>
-        <IndividualProject>
-          <LeftProject>
-            <ProjectTitle>NASA Photo Of Day</ProjectTitle>
-            <ProjectDescription>
-              React Web application that allows user to select the NASA photo of
-              the day and view the photo and description.<br></br>
-              <br></br>
-              <ProjectLinks href="https://github.com/MattBokovitz1/nasa-photo-of-the-day">
-                <FontAwesomeIcon icon={faGithub} />
-              </ProjectLinks>
-            </ProjectDescription>
-          </LeftProject>
-          <ProjectImg src={nasa} alt="NASA photo of day app"></ProjectImg>
         </IndividualProject>
       </AboutSection>
     </>
