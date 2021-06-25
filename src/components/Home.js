@@ -19,6 +19,7 @@ import front from "../assets/front.jpg";
 import plant from "../assets/plants.png";
 import nasa from "../assets/nasa.png";
 import exercise from "../assets/exercise-shop.png";
+import hrf from "../assets/HRF.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
@@ -44,6 +45,28 @@ function Home() {
         </MattSection>
 
         <Projects>Projects</Projects>
+        <IndividualProject>
+          <LeftProject>
+            <ProjectTitle>Human Rights First: Asylum</ProjectTitle>
+            <ProjectDescription>
+              Human Rights First (HRF) works to link immigration attorneys and
+              advocates with asylum seekers and provide those attorneys with
+              resources to best represent their clients. The hope is that
+              advocates for asylum seekers can use our tools to tailor their
+              arguments before a particular judge and maximize their client's
+              chances of receiving asylum.
+              <br></br>
+              <br></br>
+              <ProjectLinks href="https://github.com/Lambda-School-Labs/human-rights-first-asylum-fe-a">
+                <FontAwesomeIcon icon={faGithub} />
+              </ProjectLinks>
+            </ProjectDescription>
+          </LeftProject>
+          <ProjectImg
+            src={hrf}
+            alt="Human Rights First: Asylum Landing Page"
+          ></ProjectImg>
+        </IndividualProject>
         <IndividualProject>
           <LeftProject>
             <ProjectTitle>Exercise Shop</ProjectTitle>
