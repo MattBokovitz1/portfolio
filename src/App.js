@@ -6,7 +6,6 @@ import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import Blog from "./components/Blog";
 import Footer from "./components/Footer";
-import Books from "./components/Books";
 
 const App = () => {
   return (
@@ -16,7 +15,6 @@ const App = () => {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/blog" component={Blog} />
-          <Route path="/books" component={Books} />
         </Switch>
         <Footer />
       </div>
