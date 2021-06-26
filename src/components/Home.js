@@ -13,6 +13,7 @@ import {
   ProjectImg,
   LeftProject,
   ProjectLinks,
+  Arrow,
 } from "../styles/StyledComponents";
 import matt from "../assets/Matt.png";
 import front from "../assets/front.jpg";
@@ -22,15 +23,24 @@ import exercise from "../assets/exercise-shop.png";
 import hrf from "../assets/HRF.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faAngleDoubleDown } from "@fortawesome/free-solid-svg-icons";
 
 function Home() {
   return (
     <>
       <FrontPicture src={front}></FrontPicture>
-      <AboutSection>
+      <Arrow>
+        <div class="bounce">
+          <div class="icon">
+            <FontAwesomeIcon icon={faAngleDoubleDown} />
+          </div>
+        </div>
+      </Arrow>
+      <AboutSection id="aboutsection">
         <Matt>Matt Bokovitz</Matt>
         <MattSection>
           <ProfilePicture src={matt} alt="Profile Picture" />
+
           <Bio>
             I'm passionate about innovation and driven by impact. <br></br>
             <br></br>I am a Web Developer in Philadelphia, PA. My current tech

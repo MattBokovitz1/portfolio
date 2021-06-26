@@ -132,3 +132,73 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+.icon {
+  align-content: center;
+  color: #101010;
+}
+
+.bounce {
+  position: fixed;
+  bottom: 0;
+  height: 100px;
+  width: 50px;
+  background: none;
+  -webkit-animation: bounce 1s infinite;
+  -moz-animation: bounce 1s infinite;
+  -o-animation: bounce 1s infinite;
+  animation: bounce 1s infinite;
+  z-index: 100;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    bottom: 0px;
+  }
+  50% {
+    bottom: 15px;
+  }
+  100% {
+    bottom: 30;
+  }
+}
+
+@-moz-keyframes bounce {
+  0% {
+    bottom: 0px;
+  }
+  50% {
+    bottom: 15px;
+  }
+  100% {
+    bottom: 30;
+  }
+}
+
+@-o-keyframes bounce {
+  0% {
+    bottom: 0px;
+  }
+  50% {
+    bottom: 15px;
+  }
+  100% {
+    bottom: 30;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    bottom: 0px;
+  }
+  50% {
+    bottom: 15px;
+  }
+  100% {
+    bottom: 30;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .bounce {
+    display: none;
+  }
+}
