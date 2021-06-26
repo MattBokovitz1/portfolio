@@ -1,5 +1,9 @@
 import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope, faPencilAlt } from "@fortawesome/free-solid-svg-icons";
+import {
+  faEnvelope,
+  faPencilAlt,
+  faBook,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import {
@@ -48,6 +52,16 @@ function NavBar() {
           aria-label="Matt's Blog"
         >
           <FontAwesomeIcon icon={faPencilAlt} />
+        </Links>
+        <Links
+          to="/books"
+          onMouseOver={() => showTooltip("Books  ")}
+          onFocus={() => showTooltip("Books  ")}
+          onMouseLeave={hideTooltip}
+          onBlur={hideTooltip}
+          aria-label="Matt's Favorite Books"
+        >
+          <FontAwesomeIcon icon={faBook} />
         </Links>
         <OutsideLinks
           href="https://github.com/MattBokovitz1"

@@ -64,7 +64,7 @@ export const Nav = styled.nav`
 export const LinksDiv = styled.div`
   display: flex;
   justify-content: space-around;
-  width: 32%;
+  width: 35%;
   font-size: 1rem;
   color: black;
   text-decoration: none;
