@@ -49,6 +49,7 @@ function NavBar() {
         >
           <FontAwesomeIcon icon={faPencilAlt} />
         </Links>
+
         <OutsideLinks
           href="https://github.com/MattBokovitz1"
           onMouseOver={() => showTooltip("Github  ")}
