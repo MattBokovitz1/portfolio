@@ -46,17 +46,19 @@ export const Name = styled.h1`
 
 export const Role = styled.h2`
   font-size: 1.2rem;
+  padding: 2% 0 0 0;
   color: #101010;
 `;
 
 export const Nav = styled.nav`
-  margin: 0;
+  margin: 3% 0 3% 0;
   display: flex;
   justify-content: space-between;
   text-decoration: none;
   /* position: fixed; */
   width: 100%;
   z-index: 100;
+  line-height: 1.5;
   font-family: "PT Sans Narrow", sans-serif;
   /* background: #f8f8ff; */
 `;
@@ -72,9 +74,9 @@ export const LinksDiv = styled.div`
 `;
 
 export const FrontPicture = styled.img`
-  padding: 5% 0 3% 0;
-  width: 75%;
-  height: 60vh;
+  padding: 0 0 0 0;
+  width: 100%;
+  height: 70vh;
   @media (max-width: 800px) {
     display: none;
   }
@@ -105,7 +107,7 @@ export const AboutSection = styled.div`
 
 export const Matt = styled.h2`
   width: 100%;
-  padding: 0 0 3% 0;
+  padding: 3% 0 3% 0;
   font-size: 3rem;
   font-family: "PT Sans Narrow", sans-serif;
   font-weight: normal;
@@ -117,7 +119,7 @@ export const Matt = styled.h2`
 
 export const MattSection = styled.div`
   display: flex;
-  padding: 0 0 5% 5%;
+  padding: 3% 0 5% 5%;
 
   @media (max-width: 800px) {
     display: block;
@@ -160,6 +162,8 @@ export const Bio = styled.p`
   font-size: 1.3rem;
   color: #101010;
   text-align: left;
+  line-height: 1.3;
+
   @media (max-width: 800px) {
     margin: 5% 0 0 0;
     text-align: center;
@@ -190,7 +194,11 @@ export const ProjectTitle = styled.h3`
   font-family: "PT Sans Narrow", sans-serif;
   font-size: 2rem;
   font-weight: bold;
+  line-height: 1.5;
   color: #101010;
+  @media (max-width: 500px) {
+    margin: 3% 0 0 0;
+  }
 `;
 
 export const ProjectDescription = styled.p`
@@ -198,6 +206,7 @@ export const ProjectDescription = styled.p`
   font-family: "PT Sans Narrow", sans-serif;
   font-size: 1.3rem;
   color: #101010;
+  line-height: 1.5;
 `;
 
 export const ProjectLinks = styled.a`
