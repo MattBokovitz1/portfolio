@@ -77,6 +77,7 @@ export const FrontPicture = styled.img`
   padding: 0 0 0 0;
   width: 100%;
   height: 70vh;
+  display: flex;
   @media (max-width: 800px) {
     display: none;
   }
@@ -216,6 +217,15 @@ export const ProjectLinks = styled.a`
   justify-content: center;
   align-items: center;
   font-size: 2rem;
+`;
+
+export const Arrow = styled.a`
+  text-decoration: none;
+  color: #101010;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
 `;
 
 export const IndividualProject = styled.div`
