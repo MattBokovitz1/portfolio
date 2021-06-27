@@ -81,8 +81,10 @@ function Home() {
           <LeftProject>
             <ProjectTitle>NASA Photo Of Day</ProjectTitle>
             <ProjectDescription>
-              React Web application that allows user to select the NASA photo of
-              the day and view the photo and description.<br></br>
+              React Web application that allows user to select a date and view
+              the NASA photo of the day. A description of the photo of the day
+              is included on the page to provide context to what the user is
+              viewing.<br></br>
               <br></br>
               <ProjectLinks href="https://github.com/MattBokovitz1/nasa-photo-of-the-day">
                 <FontAwesomeIcon icon={faGithub} />
@@ -96,8 +98,10 @@ function Home() {
             <ProjectTitle>Exercise Shop</ProjectTitle>
             <ProjectDescription>
               A react app designed to be a store to purchase your favorite
-              workout gear. Included front page with lists of items, a shopping
-              cart, and a checkout form.
+              workout gear. Front page shows a list of workout gear where user
+              is able to add items to shopping cart. From the shopping cart, a
+              user is able to delete items from the cart or complete the order
+              and fill out a checkout form.
               <br></br>
               <br></br>
               <ProjectLinks href="https://github.com/MattBokovitz1/workout-store">
