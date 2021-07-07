@@ -17,7 +17,7 @@ import {
 } from "../styles/StyledComponents";
 import matt from "../assets/Matt.png";
 import front from "../assets/front.jpg";
-import plant from "../assets/plants.png";
+import plant from "../assets/plantlogin.png";
 import nasa from "../assets/nasa.png";
 import exercise from "../assets/exercise-shop.png";
 import hrf from "../assets/HRF.png";
@@ -80,6 +80,7 @@ function Home() {
             </ProjectDescription>
           </LeftProject>
           <ProjectImg
+            class="hrf"
             src={hrf}
             alt="Human Rights First: Asylum Landing Page"
           ></ProjectImg>
@@ -115,7 +116,8 @@ function Home() {
             <ProjectDescription>
               React Web application that catalogues a user's plants. Allows user
               to add, edit, and delete plant information when logged into
-              profile.<br></br>
+              profile. Connected to quotes API which displays pleasant quote on
+              login page.<br></br>
               <br></br>
               <ProjectLinks href="https://water-my-plants-tau.vercel.app/">
                 <ProjectDescription>
@@ -138,11 +140,11 @@ function Home() {
           <LeftProject>
             <ProjectTitle>Exercise Shop</ProjectTitle>
             <ProjectDescription>
-              A react app designed to be a store to purchase your favorite
-              workout gear. Front page shows a list of workout gear where user
-              is able to add items to shopping cart. From the shopping cart, a
-              user is able to delete items from the cart or complete the order
-              and fill out a checkout form.
+              React Web application designed to purchase your favorite workout
+              gear. Front page shows a list of workout gear where user is able
+              to add items to shopping cart. From the shopping cart, a user is
+              able to delete items from the cart or complete the order and fill
+              out a checkout form.
               <br></br>
               <br></br>
               <ProjectLinks href="https://github.com/MattBokovitz1/workout-store">

@@ -139,7 +139,9 @@ export const BlogTitle = styled.h2`
 
 export const ProfilePicture = styled.img`
   border-radius: 50%;
-  width: 375px;
+  width: 40%;
+  height: 400px;
+  /* width: 375px; */
   justify-content: space-evenly;
 
   @media (max-width: 800px) {
@@ -202,7 +204,7 @@ export const ProjectTitle = styled.h3`
 `;
 
 export const ProjectDescription = styled.p`
-  margin: 5% 0 10% 0;
+  margin: 3% 0 5% 0;
   font-family: "PT Sans Narrow", sans-serif;
   font-size: 1.3rem;
   color: #101010;
@@ -233,7 +235,7 @@ export const IndividualProject = styled.div`
   display: flex;
   padding: 0 0 20% 0%;
   border-bottom: 1px black;
-  @media (max-width: 500px) {
+  @media (max-width: 450px) {
     display: block;
     padding: 10% 0 15% 0;
     border-bottom: 1px solid black;
@@ -247,6 +249,7 @@ export const LeftProject = styled.div`
   font-size: 1.3rem;
   text-align: left;
   color: #101010;
+  width: 100%;
   @media (max-width: 500px) {
     margin: 0;
     text-align: center;
@@ -254,14 +257,16 @@ export const LeftProject = styled.div`
 `;
 
 export const ProjectImg = styled.img`
-  width: 50%;
   justify-content: space-evenly;
   align-content: center;
+  float: left;
+  width: 100%;
+  height: 425px;
+  overflow: hidden;
+  /* object-fit: cover; */
 
   @media (max-width: 500px) {
-    height: auto;
-    width: 80%;
-    margin: 0 0 5% 0;
+    display: none;
   }
 `;
 
