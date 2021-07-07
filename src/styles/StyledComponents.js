@@ -77,7 +77,7 @@ export const FrontPicture = styled.img`
   padding: 0 0 0 0;
   width: 100%;
   height: 70vh;
-  @media (max-width: 800px) {
+  @media (max-width: 1050px) {
     display: none;
   }
 `;
@@ -170,6 +170,9 @@ export const Bio = styled.p`
     margin: 5% 0 0 0;
     text-align: center;
   }
+  @media (max-width: 1000px) {
+    font-size: 1rem;
+  }
 `;
 
 export const ProjectsSection = styled.div`
@@ -199,16 +202,19 @@ export const ProjectTitle = styled.h3`
   line-height: 1.5;
   color: #101010;
   @media (max-width: 500px) {
-    margin: 3% 0 0 0;
+    padding: 1% 0 0 0;
   }
 `;
 
 export const ProjectDescription = styled.p`
-  margin: 3% 0 5% 0;
+  margin: 3% 0 2% 0;
   font-family: "PT Sans Narrow", sans-serif;
   font-size: 1.3rem;
   color: #101010;
   line-height: 1.5;
+  @media (max-width: 1000px) {
+    font-size: 1rem;
+  }
 `;
 
 export const ProjectLinks = styled.a`
@@ -237,7 +243,7 @@ export const IndividualProject = styled.div`
   border-bottom: 1px black;
   @media (max-width: 450px) {
     display: block;
-    padding: 10% 0 15% 0;
+    padding: 20% 0 25% 0;
     border-bottom: 1px solid black;
   }
 `;
@@ -261,12 +267,15 @@ export const ProjectImg = styled.img`
   align-content: center;
   float: left;
   width: 100%;
-  height: 425px;
+  height: 350px;
   overflow: hidden;
-  /* object-fit: cover; */
 
-  @media (max-width: 500px) {
-    display: none;
+  @media (max-width: 700px) {
+    padding: 5% 0;
+    width: 100%;
+    height: auto;
+    overflow: none;
+    float: none;
   }
 `;
 
