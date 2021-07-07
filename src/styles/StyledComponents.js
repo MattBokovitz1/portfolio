@@ -164,7 +164,7 @@ export const Bio = styled.p`
   font-size: 1.3rem;
   color: #101010;
   text-align: left;
-  line-height: 1.3;
+  line-height: 1.5;
 
   @media (max-width: 800px) {
     margin: 5% 0 0 0;
