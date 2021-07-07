@@ -23,7 +23,7 @@ import exercise from "../assets/exercise-shop.png";
 import hrf from "../assets/HRF.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faAngleDoubleDown } from "@fortawesome/free-solid-svg-icons";
+import { faAngleDoubleDown, faRocket } from "@fortawesome/free-solid-svg-icons";
 
 function Home() {
   return (
@@ -40,7 +40,6 @@ function Home() {
         <Matt>Matt Bokovitz</Matt>
         <MattSection>
           <ProfilePicture src={matt} alt="Profile Picture" />
-
           <Bio>
             I'm passionate about innovation and driven by impact. <br></br>
             <br></br>I am a Web Developer in Philadelphia, PA. My current tech
@@ -53,7 +52,6 @@ function Home() {
             that have shaped how I view the world in an appreciative manner.
           </Bio>
         </MattSection>
-
         <Projects>Projects</Projects>
         <IndividualProject>
           <LeftProject>
@@ -67,8 +65,17 @@ function Home() {
               chances of receiving asylum.
               <br></br>
               <br></br>
+              <ProjectLinks href="https://a.humanrightsfirstasylum.dev/login">
+                <ProjectDescription>
+                  Deployed Application
+                  <FontAwesomeIcon icon={faRocket} />
+                </ProjectDescription>
+              </ProjectLinks>
               <ProjectLinks href="https://github.com/Lambda-School-Labs/human-rights-first-asylum-fe-a">
-                <FontAwesomeIcon icon={faGithub} />
+                <ProjectDescription>
+                  Github Repository
+                  <FontAwesomeIcon icon={faGithub} />
+                </ProjectDescription>
               </ProjectLinks>
             </ProjectDescription>
           </LeftProject>
@@ -86,12 +93,46 @@ function Home() {
               is included on the page to provide context to what the user is
               viewing.<br></br>
               <br></br>
+              <ProjectLinks href="https://nasa-photo-of-the-day-chi-one.vercel.app/">
+                <ProjectDescription>
+                  Deployed Application
+                  <FontAwesomeIcon icon={faRocket} />
+                </ProjectDescription>
+              </ProjectLinks>
               <ProjectLinks href="https://github.com/MattBokovitz1/nasa-photo-of-the-day">
-                <FontAwesomeIcon icon={faGithub} />
+                <ProjectDescription>
+                  Github Repository
+                  <FontAwesomeIcon icon={faGithub} />
+                </ProjectDescription>
               </ProjectLinks>
             </ProjectDescription>
           </LeftProject>
           <ProjectImg src={nasa} alt="NASA photo of day app"></ProjectImg>
+        </IndividualProject>
+        <IndividualProject>
+          <LeftProject>
+            <ProjectTitle>Water My Plants</ProjectTitle>
+            <ProjectDescription>
+              React Web application that catalogues a user's plants. Allows user
+              to add, edit, and delete plant information when logged into
+              profile.<br></br>
+              <br></br>
+              <ProjectLinks href="https://water-my-plants-tau.vercel.app/">
+                <ProjectDescription>
+                  Deployed Application
+                  <tab></tab>
+                  <FontAwesomeIcon icon={faRocket} />
+                </ProjectDescription>
+              </ProjectLinks>
+              <ProjectLinks href="https://github.com/Build-Wk-Water-My-Plants/front-end">
+                <ProjectDescription>
+                  Github Repository
+                  <FontAwesomeIcon icon={faGithub} />
+                </ProjectDescription>
+              </ProjectLinks>
+            </ProjectDescription>
+          </LeftProject>
+          <ProjectImg src={plant} alt="Water My Plants App"></ProjectImg>
         </IndividualProject>
         <IndividualProject>
           <LeftProject>
@@ -105,26 +146,14 @@ function Home() {
               <br></br>
               <br></br>
               <ProjectLinks href="https://github.com/MattBokovitz1/workout-store">
-                <FontAwesomeIcon icon={faGithub} />
+                <ProjectDescription>
+                  Github Repository
+                  <FontAwesomeIcon icon={faGithub} />
+                </ProjectDescription>
               </ProjectLinks>
             </ProjectDescription>
           </LeftProject>
           <ProjectImg src={exercise} alt="Exercise Shop App"></ProjectImg>
-        </IndividualProject>
-        <IndividualProject>
-          <LeftProject>
-            <ProjectTitle>Water My Plants</ProjectTitle>
-            <ProjectDescription>
-              React Web application that catalogues a user's plants. Allows user
-              to add, edit, and delete plant information when logged into
-              profile.<br></br>
-              <br></br>
-              <ProjectLinks href="https://github.com/Build-Wk-Water-My-Plants/front-end">
-                <FontAwesomeIcon icon={faGithub} />
-              </ProjectLinks>
-            </ProjectDescription>
-          </LeftProject>
-          <ProjectImg src={plant} alt="Water My Plants App"></ProjectImg>
         </IndividualProject>
       </AboutSection>
     </>

@@ -235,7 +235,7 @@ export const IndividualProject = styled.div`
   border-bottom: 1px black;
   @media (max-width: 500px) {
     display: block;
-    padding: 5% 0 0 0;
+    padding: 10% 0 15% 0;
     border-bottom: 1px solid black;
   }
 `;
