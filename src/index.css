@@ -141,3 +141,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.hrf {
+  height: 70%;
+}
