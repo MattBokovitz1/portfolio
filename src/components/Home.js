@@ -57,13 +57,12 @@ function Home() {
           <LeftProject>
             <ProjectTitle>Human Rights First: Asylum</ProjectTitle>
             <ProjectDescription>
-              Human Rights First (HRF) works to link immigration attorneys and
-              advocates with asylum seekers and provide those attorneys with
-              resources to best represent their clients. The hope is that
-              advocates for asylum seekers can use our tools to tailor their
-              arguments before a particular judge and maximize their client's
-              chances of receiving asylum.
-              <br></br>
+              Human Rights First (HRF) works to link immigration attorneys with
+              asylum seekers and provide those attorneys with resources to best
+              represent their clients. The hope is that advocates for asylum
+              seekers can use our tools to tailor their arguments before a
+              particular judge and maximize their client's chances of receiving
+              asylum.
               <br></br>
               <ProjectLinks href="https://a.humanrightsfirstasylum.dev/login">
                 <ProjectDescription>
@@ -93,7 +92,6 @@ function Home() {
               the NASA photo of the day. A description of the photo of the day
               is included on the page to provide context to what the user is
               viewing.<br></br>
-              <br></br>
               <ProjectLinks href="https://nasa-photo-of-the-day-chi-one.vercel.app/">
                 <ProjectDescription>
                   Deployed Application
@@ -118,11 +116,9 @@ function Home() {
               to add, edit, and delete plant information when logged into
               profile. Connected to quotes API which displays pleasant quote on
               login page.<br></br>
-              <br></br>
               <ProjectLinks href="https://water-my-plants-tau.vercel.app/">
                 <ProjectDescription>
                   Deployed Application
-                  <tab></tab>
                   <FontAwesomeIcon icon={faRocket} />
                 </ProjectDescription>
               </ProjectLinks>
@@ -145,7 +141,6 @@ function Home() {
               to add items to shopping cart. From the shopping cart, a user is
               able to delete items from the cart or complete the order and fill
               out a checkout form.
-              <br></br>
               <br></br>
               <ProjectLinks href="https://github.com/MattBokovitz1/workout-store">
                 <ProjectDescription>
