@@ -169,8 +169,8 @@ export const Bio = styled.p`
   @media (max-width: 800px) {
     margin: 5% 0 0 0;
   }
-  @media (max-width: 1000px) {
-    font-size: 1rem;
+  @media (max-width: 500) {
+    font-size: 1.1rem;
   }
 `;
 
