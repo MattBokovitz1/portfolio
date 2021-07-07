@@ -159,17 +159,17 @@ export const ProfilePicture = styled.img`
 
 export const Bio = styled.p`
   justify-content: space-evenly;
-  margin: 5% 5% 0 10%;
+  margin: 2% 5% 0 10%;
   font-family: "PT Sans Narrow", sans-serif;
   font-size: 1.3rem;
   color: #101010;
   text-align: left;
-  line-height: 1.5;
+  line-height: 1.4;
 
   @media (max-width: 800px) {
     margin: 5% 0 0 0;
   }
-  @media (max-width: 500) {
+  @media (max-width: 500px) {
     font-size: 1.1rem;
   }
 `;
@@ -212,7 +212,7 @@ export const ProjectDescription = styled.p`
   font-family: "PT Sans Narrow", sans-serif;
   font-size: 1.3rem;
   color: #101010;
-  line-height: 1.5;
+  line-height: 1.4;
   @media (max-width: 500px) {
     font-size: 1.1rem;
     text-align: left;
