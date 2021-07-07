@@ -41,7 +41,9 @@ function Home() {
         <MattSection>
           <ProfilePicture src={matt} alt="Profile Picture" />
           <Bio>
-            I'm passionate about innovation and driven by impact. <br></br>
+            I'm passionate about innovation and driven to help others. I am
+            looking for an opportunity to make a significant contribution to an
+            interesting, complex project. <br></br>
             <br></br>I am a Web Developer in Philadelphia, PA. My current tech
             stack includes React.js and Node.js. I enjoy making websites with
             clean and easily navigable designs.

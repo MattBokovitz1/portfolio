@@ -168,7 +168,6 @@ export const Bio = styled.p`
 
   @media (max-width: 800px) {
     margin: 5% 0 0 0;
-    text-align: center;
   }
   @media (max-width: 1000px) {
     font-size: 1rem;
@@ -203,6 +202,8 @@ export const ProjectTitle = styled.h3`
   color: #101010;
   @media (max-width: 500px) {
     padding: 1% 0 0 0;
+    font-size: 1.5rem;
+    text-align: left;
   }
 `;
 
@@ -212,8 +213,9 @@ export const ProjectDescription = styled.p`
   font-size: 1.3rem;
   color: #101010;
   line-height: 1.5;
-  @media (max-width: 1000px) {
-    font-size: 1rem;
+  @media (max-width: 500px) {
+    font-size: 1.1rem;
+    text-align: left;
   }
 `;
 
