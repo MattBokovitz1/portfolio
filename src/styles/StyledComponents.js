@@ -42,12 +42,18 @@ export const NameLink = styled(Link)`
 export const Name = styled.h1`
   font-size: 1.7rem;
   color: #101010;
+  @media (max-width: 650px) {
+    font-size: 1.2rem;
+  }
 `;
 
 export const Role = styled.h2`
   font-size: 1.2rem;
   padding: 2% 0 0 0;
   color: #101010;
+  @media (max-width: 650px) {
+    font-size: 1rem;
+  }
 `;
 
 export const Nav = styled.nav`
@@ -55,12 +61,13 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   text-decoration: none;
-  /* position: fixed; */
   width: 100%;
   z-index: 100;
   line-height: 1.5;
   font-family: "PT Sans Narrow", sans-serif;
-  /* background: #f8f8ff; */
+  @media (max-width: 500px) {
+    padding: 5% 0 0 5%;
+  }
 `;
 
 export const LinksDiv = styled.div`
@@ -71,6 +78,9 @@ export const LinksDiv = styled.div`
   color: black;
   text-decoration: none;
   padding: 0 5% 0 30%;
+  @media (max-width: 500px) {
+    padding: 0 5% 0 0;
+  }
 `;
 
 export const FrontPicture = styled.img`
@@ -149,7 +159,7 @@ export const ProfilePicture = styled.img`
     height: 40%;
     justify-content: center;
   }
-  @media (max-width: 500px) {
+  @media (max-width: 650px) {
     width: 90%;
     height: 30%;
     border-radius: 10%;
