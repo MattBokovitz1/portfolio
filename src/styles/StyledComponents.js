@@ -77,7 +77,7 @@ export const FrontPicture = styled.img`
   padding: 0 0 0 0;
   width: 100%;
   height: 70vh;
-  @media (max-width: 1050px) {
+  @media (max-width: 1000px) {
     display: none;
   }
 `;
@@ -112,7 +112,7 @@ export const Matt = styled.h2`
   font-family: "PT Sans Narrow", sans-serif;
   font-weight: normal;
   color: #101010;
-  @media (max-width: 800px) {
+  @media (max-width: 1000px) {
     display: none;
   }
 `;
@@ -121,7 +121,7 @@ export const MattSection = styled.div`
   display: flex;
   padding: 3% 0 5% 5%;
 
-  @media (max-width: 800px) {
+  @media (max-width: 1000px) {
     display: block;
     border-bottom: 1px solid black;
     padding: 0 0 15% 0;
@@ -144,7 +144,7 @@ export const ProfilePicture = styled.img`
   /* width: 375px; */
   justify-content: space-evenly;
 
-  @media (max-width: 800px) {
+  @media (max-width: 1000px) {
     width: 40%;
     height: 40%;
     justify-content: center;
@@ -189,6 +189,9 @@ export const Projects = styled.h2`
   font-size: 3rem;
   font-weight: normal;
   color: #101010;
+  @media (max-width: 800px) {
+    padding: 5% 0 3% 0;
+  }
   @media (max-width: 500px) {
     display: none;
   }
@@ -234,7 +237,7 @@ export const Arrow = styled.a`
   justify-content: center;
   align-items: center;
   font-size: 4rem;
-  @media (max-width: 800px) {
+  @media (max-width: 1000px) {
     display: none;
   }
 `;
@@ -243,10 +246,13 @@ export const IndividualProject = styled.div`
   display: flex;
   padding: 0 0 20% 0%;
   border-bottom: 1px black;
-  @media (max-width: 450px) {
+  @media (max-width: 1000px) {
     display: block;
-    padding: 20% 0 25% 0;
+    padding: 10% 0 15% 0;
     border-bottom: 1px solid black;
+  }
+  @media (max-width: 600px) {
+    padding: 20% 0 25% 0;
   }
 `;
 
@@ -272,12 +278,15 @@ export const ProjectImg = styled.img`
   height: 350px;
   overflow: hidden;
 
-  @media (max-width: 700px) {
+  @media (max-width: 1000px) {
     padding: 5% 0;
-    width: 100%;
+    width: 70%;
     height: auto;
     overflow: none;
     float: none;
+  }
+  @media (max-width: 500px) {
+    width: 100%;
   }
 `;
 
@@ -309,7 +318,7 @@ export const Quote = styled.div`
 export const Sailboat = styled.img`
   width: 100%;
   height: 400px;
-  @media (max-width: 500px) {
+  @media (max-width: 800px) {
     display: none;
   }
 `;
