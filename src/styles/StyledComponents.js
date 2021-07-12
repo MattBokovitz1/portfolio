@@ -87,7 +87,7 @@ export const FrontPicture = styled.img`
   padding: 0 0 0 0;
   width: 100%;
   height: 70vh;
-  @media (max-width: 1000px) {
+  @media (max-width: 1050px) {
     display: none;
   }
 `;
@@ -122,7 +122,7 @@ export const Matt = styled.h2`
   font-family: "PT Sans Narrow", sans-serif;
   font-weight: normal;
   color: #101010;
-  @media (max-width: 1000px) {
+  @media (max-width: 1050px) {
     display: none;
   }
 `;
@@ -241,19 +241,19 @@ export const ProjectLinks = styled.a`
   align-items: center;
   font-size: 2rem;
   border: 1px solid #101010;
-  margin: 0 28% 4% 28%;
+  margin: 2% 28% 4% 28%;
   background: #101010;
   border-radius: 5%;
   @media (max-width: 1150px) {
-    margin: 0 15% 4% 15%;
+    margin: 4% 15% 4% 15%;
   }
 
   @media (max-width: 800px) {
-    margin: 0 25% 4% 25%;
+    margin: 4% 25% 4% 25%;
   }
 
   @media (max-width: 500px) {
-    margin: 0 20% 4% 20%;
+    margin: 4% 15% 4% 15%;
   }
 `;
 
