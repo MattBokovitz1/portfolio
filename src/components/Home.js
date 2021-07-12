@@ -14,6 +14,7 @@ import {
   LeftProject,
   ProjectLinks,
   Arrow,
+  WhiteFont,
 } from "../styles/StyledComponents";
 import matt from "../assets/Matt.png";
 import front from "../assets/front.jpg";
@@ -68,14 +69,18 @@ function Home() {
               <br></br>
               <ProjectLinks href="https://a.humanrightsfirstasylum.dev/login">
                 <ProjectDescription>
-                  Deployed Application
-                  <FontAwesomeIcon icon={faRocket} />
+                  <WhiteFont>
+                    Deployed Application
+                    <FontAwesomeIcon icon={faRocket} />
+                  </WhiteFont>
                 </ProjectDescription>
               </ProjectLinks>
               <ProjectLinks href="https://github.com/Lambda-School-Labs/human-rights-first-asylum-fe-a">
                 <ProjectDescription>
-                  Github Repository
-                  <FontAwesomeIcon icon={faGithub} />
+                  <WhiteFont>
+                    Github Repository
+                    <FontAwesomeIcon icon={faGithub} />
+                  </WhiteFont>
                 </ProjectDescription>
               </ProjectLinks>
             </ProjectDescription>
@@ -96,14 +101,18 @@ function Home() {
               viewing.<br></br>
               <ProjectLinks href="https://nasa-photo-of-the-day-chi-one.vercel.app/">
                 <ProjectDescription>
-                  Deployed Application
-                  <FontAwesomeIcon icon={faRocket} />
+                  <WhiteFont>
+                    Deployed Application
+                    <FontAwesomeIcon icon={faRocket} />
+                  </WhiteFont>
                 </ProjectDescription>
               </ProjectLinks>
               <ProjectLinks href="https://github.com/MattBokovitz1/nasa-photo-of-the-day">
                 <ProjectDescription>
-                  Github Repository
-                  <FontAwesomeIcon icon={faGithub} />
+                  <WhiteFont>
+                    Github Repository
+                    <FontAwesomeIcon icon={faGithub} />
+                  </WhiteFont>
                 </ProjectDescription>
               </ProjectLinks>
             </ProjectDescription>
@@ -120,14 +129,18 @@ function Home() {
               login page.<br></br>
               <ProjectLinks href="https://water-my-plants-tau.vercel.app/">
                 <ProjectDescription>
-                  Deployed Application
-                  <FontAwesomeIcon icon={faRocket} />
+                  <WhiteFont>
+                    Deployed Application
+                    <FontAwesomeIcon icon={faRocket} />
+                  </WhiteFont>
                 </ProjectDescription>
               </ProjectLinks>
               <ProjectLinks href="https://github.com/Build-Wk-Water-My-Plants/front-end">
                 <ProjectDescription>
-                  Github Repository
-                  <FontAwesomeIcon icon={faGithub} />
+                  <WhiteFont>
+                    Github Repository
+                    <FontAwesomeIcon icon={faGithub} />
+                  </WhiteFont>
                 </ProjectDescription>
               </ProjectLinks>
             </ProjectDescription>
@@ -146,8 +159,10 @@ function Home() {
               <br></br>
               <ProjectLinks href="https://github.com/MattBokovitz1/workout-store">
                 <ProjectDescription>
-                  Github Repository
-                  <FontAwesomeIcon icon={faGithub} />
+                  <WhiteFont>
+                    Github Repository
+                    <FontAwesomeIcon icon={faGithub} />
+                  </WhiteFont>
                 </ProjectDescription>
               </ProjectLinks>
             </ProjectDescription>
