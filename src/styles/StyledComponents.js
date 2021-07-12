@@ -221,7 +221,8 @@ export const ProjectTitle = styled.h3`
 `;
 
 export const ProjectDescription = styled.p`
-  margin: 3% 0 2% 0;
+  margin: 3% 0 3% 0;
+
   font-family: "PT Sans Narrow", sans-serif;
   font-size: 1.3rem;
   color: #101010;
@@ -234,12 +235,32 @@ export const ProjectDescription = styled.p`
 
 export const ProjectLinks = styled.a`
   text-decoration: none;
-  color: #101010;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 2rem;
+  border: 1px solid #101010;
+  margin: 0 28% 4% 28%;
+  background: #101010;
+  border-radius: 5%;
+  @media (max-width: 1150px) {
+    margin: 0 15% 4% 15%;
+  }
+
+  @media (max-width: 800px) {
+    margin: 0 25% 4% 25%;
+  }
+
+  @media (max-width: 500px) {
+    margin: 0 20% 4% 20%;
+  }
 `;
+
+export const WhiteFont = styled.p`
+  color: #f8f8ff;
+`;
+
 export const Arrow = styled.a`
   text-decoration: none;
   color: #101010;
