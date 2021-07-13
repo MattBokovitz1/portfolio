@@ -235,7 +235,7 @@ export const ProjectDescription = styled.p`
 
 export const ProjectLinks = styled.a`
   text-decoration: none;
-  color: white;
+  color: #f8f8ff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -243,7 +243,12 @@ export const ProjectLinks = styled.a`
   border: 1px solid #101010;
   margin: 2% 28% 4% 28%;
   background: #101010;
-  border-radius: 5%;
+  &:hover {
+    background: white;
+    color: navy;
+    border: 1px solid navy;
+  }
+
   @media (max-width: 1150px) {
     margin: 4% 15% 4% 15%;
   }
@@ -258,7 +263,19 @@ export const ProjectLinks = styled.a`
 `;
 
 export const WhiteFont = styled.p`
-  color: #f8f8ff;
+  margin: 3% 0 3% 0;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.4;
+  &:hover {
+    background: white;
+    color: navy;
+  }
+
+  @media (max-width: 500px) {
+    font-size: 1.1rem;
+    text-align: left;
+  }
 `;
 
 export const Arrow = styled.a`
