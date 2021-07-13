@@ -66,7 +66,7 @@ export const Nav = styled.nav`
   line-height: 1.5;
   font-family: "PT Sans Narrow", sans-serif;
   @media (max-width: 500px) {
-    padding: 5% 0 0 5%;
+    padding: 5% 0 5% 0;
   }
 `;
 
@@ -131,7 +131,7 @@ export const MattSection = styled.div`
   display: flex;
   padding: 3% 0 5% 5%;
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1050px) {
     display: block;
     border-bottom: 1px solid black;
     padding: 0 0 15% 0;
@@ -150,20 +150,24 @@ export const BlogTitle = styled.h2`
 export const ProfilePicture = styled.img`
   border-radius: 50%;
   width: 40%;
-  height: 400px;
+  height: 40%;
   /* width: 375px; */
   justify-content: space-evenly;
+  vertical-align: middle;
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1050px) {
     width: 40%;
     height: 40%;
-    justify-content: center;
+    justify-content: space-evenly;
   }
-  @media (max-width: 650px) {
-    width: 90%;
+  @media (max-width: 750px) {
+    width: 70%;
     height: 30%;
     border-radius: 10%;
     margin: 5% 0 0 0;
+  }
+  @media (max-width: 550px) {
+    width: 90%;
   }
 `;
 
@@ -253,8 +257,8 @@ export const ProjectLinks = styled.a`
     margin: 4% 15% 4% 15%;
   }
 
-  @media (max-width: 800px) {
-    margin: 4% 25% 4% 25%;
+  @media (max-width: 1000px) {
+    margin: 4% 28% 4% 28%;
   }
 
   @media (max-width: 500px) {
