@@ -15,8 +15,11 @@ import {
   ProjectLinks,
   Arrow,
   WhiteFont,
+  SmallProfile,
 } from "../styles/StyledComponents";
+
 import matt from "../assets/Matt.png";
+import smallprofile from "../assets/SmallProfile.png";
 import front from "../assets/front.jpg";
 import plant from "../assets/plantlogin.png";
 import nasa from "../assets/nasa.png";
@@ -41,6 +44,7 @@ function Home() {
         <Matt>Matt Bokovitz</Matt>
         <MattSection>
           <ProfilePicture src={matt} alt="Profile Picture" />
+          <SmallProfile src={smallprofile} alt="Profile Picture" />
           <Bio>
             I'm passionate about innovation and driven to help others. I am
             looking for an opportunity to make a significant contribution to an
