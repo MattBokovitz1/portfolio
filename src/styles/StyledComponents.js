@@ -148,7 +148,6 @@ export const BlogTitle = styled.h2`
 `;
 
 export const ProfilePicture = styled.img`
-  border-radius: 50%;
   width: 40%;
   height: 40%;
   /* width: 375px; */
@@ -160,14 +159,27 @@ export const ProfilePicture = styled.img`
     height: 40%;
     justify-content: space-evenly;
   }
-  @media (max-width: 750px) {
+  @media (max-width: 850px) {
     width: 70%;
     height: 30%;
     border-radius: 10%;
     margin: 5% 0 0 0;
   }
-  @media (max-width: 550px) {
-    width: 90%;
+
+  @media (max-width: 500px) {
+    display: none;
+  }
+`;
+
+export const SmallProfile = styled.img`
+  width: 90%;
+  justify-content: space-evenly;
+  vertical-align: middle;
+  height: 30%;
+  border-radius: 10%;
+  margin: 5% 0 0 0;
+  @media (min-width: 501px) {
+    display: none;
   }
 `;
 
