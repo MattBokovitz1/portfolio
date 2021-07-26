@@ -25,6 +25,7 @@ import plant from "../assets/plantlogin.png";
 import nasa from "../assets/nasa.png";
 import exercise from "../assets/exercise-shop.png";
 import hrf from "../assets/HRF.png";
+import workout from "../assets/workout.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faAngleDoubleDown, faRocket } from "@fortawesome/free-solid-svg-icons";
@@ -93,6 +94,37 @@ function Home() {
             class="hrf"
             src={hrf}
             alt="Human Rights First: Asylum Landing Page"
+          ></ProjectImg>
+        </IndividualProject>
+        <IndividualProject>
+          <LeftProject>
+            <ProjectTitle>Fitness Club</ProjectTitle>
+            <ProjectDescription>
+              React Web application for fitness coach to use to market classes
+              and for athletes to find out about upcoming fitness events in
+              their area. Users can register as admins or clients and then sign
+              in. Admins can create, edit, and delete workout classes, and
+              clients can view the classes. Front end deployed to vercel and
+              node backend to heroku.
+              <br></br>
+              <ProjectLinks href="https://fitness-club.vercel.app/">
+                <WhiteFont>
+                  Deployed Application
+                  <FontAwesomeIcon icon={faRocket} />
+                </WhiteFont>
+              </ProjectLinks>
+              <ProjectLinks href="https://github.com/MattBokovitz1/FitnessClub">
+                <WhiteFont>
+                  Github Repository
+                  <FontAwesomeIcon icon={faGithub} />
+                </WhiteFont>
+              </ProjectLinks>
+            </ProjectDescription>
+          </LeftProject>
+          <ProjectImg
+            class="workout"
+            src={workout}
+            alt="Fitness Club login page picture"
           ></ProjectImg>
         </IndividualProject>
         <IndividualProject>
