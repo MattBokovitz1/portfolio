@@ -22,7 +22,7 @@ export const OutsideLinks = styled.a`
   justify-content: center;
   align-items: center;
   font-size: 2rem;
-  @media (max-width: 500px) {
+  @media (max-width: 850px) {
     display: none;
   }
 `;
@@ -87,7 +87,7 @@ export const FrontPicture = styled.img`
   padding: 0 0 0 0;
   width: 100%;
   height: 70vh;
-  @media (max-width: 1050px) {
+  @media (max-width: 850px) {
     display: none;
   }
 `;
@@ -150,13 +150,13 @@ export const BlogTitle = styled.h2`
 export const ProfilePicture = styled.img`
   width: 40%;
   height: 40%;
-  /* width: 375px; */
   justify-content: space-evenly;
   vertical-align: middle;
 
-  @media (max-width: 1050px) {
-    width: 40%;
-    height: 40%;
+  @media (max-width: 1000px) {
+    width: 60%;
+    height: 20%;
+    padding: 0 0 5% 0;
     justify-content: space-evenly;
   }
   @media (max-width: 850px) {
@@ -191,6 +191,10 @@ export const Bio = styled.p`
   color: #101010;
   text-align: left;
   line-height: 1.4;
+
+  @media (min-width: 1600px) {
+    font-size: 1.7rem;
+  }
 
   @media (max-width: 800px) {
     margin: 5% 0 0 0;
@@ -301,7 +305,7 @@ export const Arrow = styled.a`
   justify-content: center;
   align-items: center;
   font-size: 4rem;
-  @media (max-width: 1000px) {
+  @media (max-width: 850px) {
     display: none;
   }
 `;
