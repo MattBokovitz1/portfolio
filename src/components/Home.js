@@ -73,20 +73,16 @@ function Home() {
               asylum.
               <br></br>
               <ProjectLinks href="https://a.humanrightsfirstasylum.dev/login">
-                {/* <ProjectDescription> */}
                 <WhiteFont>
                   Deployed Application
                   <FontAwesomeIcon icon={faRocket} />
                 </WhiteFont>
-                {/* </ProjectDescription> */}
               </ProjectLinks>
               <ProjectLinks href="https://github.com/Lambda-School-Labs/human-rights-first-asylum-fe-a">
-                {/* <ProjectDescription> */}
                 <WhiteFont>
                   Github Repository
                   <FontAwesomeIcon icon={faGithub} />
                 </WhiteFont>
-                {/* </ProjectDescription> */}
               </ProjectLinks>
             </ProjectDescription>
           </LeftProject>
@@ -138,20 +134,16 @@ function Home() {
               out a checkout form.
               <br></br>
               <ProjectLinks href="https://workout-store.vercel.app/">
-                {/* <ProjectDescription> */}
                 <WhiteFont>
                   Deployed Application
                   <FontAwesomeIcon icon={faRocket} />
                 </WhiteFont>
-                {/* </ProjectDescription> */}
               </ProjectLinks>
               <ProjectLinks href="https://github.com/MattBokovitz1/workout-store">
-                {/* <ProjectDescription> */}
                 <WhiteFont>
                   Github Repository
                   <FontAwesomeIcon icon={faGithub} />
                 </WhiteFont>
-                {/* </ProjectDescription> */}
               </ProjectLinks>
             </ProjectDescription>
           </LeftProject>
@@ -166,20 +158,16 @@ function Home() {
               is included on the page to provide context to what the user is
               viewing.<br></br>
               <ProjectLinks href="https://nasa-photo-of-the-day-chi-one.vercel.app/">
-                {/* <ProjectDescription> */}
                 <WhiteFont>
                   Deployed Application
                   <FontAwesomeIcon icon={faRocket} />
                 </WhiteFont>
-                {/* </ProjectDescription> */}
               </ProjectLinks>
               <ProjectLinks href="https://github.com/MattBokovitz1/nasa-photo-of-the-day">
-                {/* <ProjectDescription> */}
                 <WhiteFont>
                   Github Repository
                   <FontAwesomeIcon icon={faGithub} />
                 </WhiteFont>
-                {/* </ProjectDescription> */}
               </ProjectLinks>
             </ProjectDescription>
           </LeftProject>
@@ -194,20 +182,16 @@ function Home() {
               profile. Connected to quotes API which displays pleasant quote on
               login page.<br></br>
               <ProjectLinks href="https://water-my-plants-tau.vercel.app/">
-                {/* <ProjectDescription> */}
                 <WhiteFont>
                   Deployed Application
                   <FontAwesomeIcon icon={faRocket} />
                 </WhiteFont>
-                {/* </ProjectDescription> */}
               </ProjectLinks>
               <ProjectLinks href="https://github.com/Build-Wk-Water-My-Plants/front-end">
-                {/* <ProjectDescription> */}
                 <WhiteFont>
                   Github Repository
                   <FontAwesomeIcon icon={faGithub} />
                 </WhiteFont>
-                {/* </ProjectDescription> */}
               </ProjectLinks>
             </ProjectDescription>
           </LeftProject>
