@@ -130,10 +130,10 @@ export const Matt = styled.h2`
 export const MattSection = styled.div`
   display: flex;
   padding: 3% 0 5% 5%;
+  border-bottom: 1px solid black;
 
   @media (max-width: 1050px) {
     display: block;
-    border-bottom: 1px solid black;
     padding: 0 0 15% 0;
   }
 `;
@@ -150,7 +150,7 @@ export const BlogTitle = styled.h2`
 export const ProfilePicture = styled.img`
   width: 40%;
   height: 40%;
-  justify-content: space-evenly;
+  justify-content: space-between;
   vertical-align: middle;
 
   @media (max-width: 1000px) {
@@ -193,7 +193,11 @@ export const Bio = styled.p`
   line-height: 1.4;
 
   @media (min-width: 1600px) {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
+  }
+
+  @media (min-width: 1100px) {
+    font-size: 1.4rem;
   }
 
   @media (max-width: 800px) {
@@ -204,17 +208,9 @@ export const Bio = styled.p`
   }
 `;
 
-export const ProjectsSection = styled.div`
-  background: #f8f8ff;
-  margin: 0 0 10% 0;
-  @media (max-width: 500px) {
-    display: block;
-  }
-`;
-
 export const Projects = styled.h2`
   width: 100%;
-  padding: 5% 0 8% 0;
+  padding: 10% 0 8% 0;
   font-family: "PT Sans Narrow", sans-serif;
   font-size: 3rem;
   font-weight: normal;
@@ -265,8 +261,8 @@ export const ProjectLinks = styled.a`
   background: #101010;
   &:hover {
     background: white;
-    color: navy;
-    border: 1px solid navy;
+    color: black;
+    border: 1px solid black;
   }
 
   @media (max-width: 1150px) {
@@ -289,7 +285,7 @@ export const WhiteFont = styled.p`
   line-height: 1.4;
   &:hover {
     background: white;
-    color: navy;
+    color: black;
   }
 
   @media (max-width: 500px) {
@@ -311,7 +307,6 @@ export const Arrow = styled.a`
 `;
 
 export const IndividualProject = styled.div`
-  display: flex;
   padding: 0 0 20% 0%;
   border-bottom: 1px black;
   @media (max-width: 1000px) {
@@ -331,7 +326,12 @@ export const LeftProject = styled.div`
   font-size: 1.3rem;
   text-align: left;
   color: #101010;
-  width: 100%;
+  @media (min-width: 1000px) {
+    width: 40%;
+  }
+  @media (max-width: 999px) {
+    width: 100%;
+  }
   @media (max-width: 500px) {
     margin: 0;
     text-align: center;
@@ -342,19 +342,27 @@ export const ProjectImg = styled.img`
   justify-content: space-evenly;
   align-content: center;
   float: left;
-  width: 100%;
+  margin: 0 0 0 5%;
+  width: 40%;
   height: 350px;
   overflow: hidden;
 
   @media (max-width: 1000px) {
+    margin: 0 auto;
     padding: 5% 0;
-    width: 70%;
     height: auto;
     overflow: none;
     float: none;
+    width: 70%;
+    height: 250px;
   }
-  @media (max-width: 500px) {
-    width: 100%;
+`;
+
+export const ProjectDiv = styled.div`
+  display: flex;
+  padding: 5% 0;
+  @media (max-width: 1000px) {
+    display: block;
   }
 `;
 
