@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import ProjectDetails from "./ProjectDetails";
-import { IndividualProject } from "../styles/StyledComponents";
+import { IndividualProject } from "../../styles/StyledComponents";
 
 const ProjectSection = () => {
   const [projects, setProjects] = useState([]);

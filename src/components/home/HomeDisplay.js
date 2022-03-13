@@ -1,6 +1,6 @@
 import React from "react";
-import { FrontPicture, Arrow } from "../styles/StyledComponents";
-import front from "../assets/front.jpg";
+import { FrontPicture, Arrow } from "../../styles/StyledComponents";
+import front from "../../assets/front.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { faAngleDoubleDown } from "@fortawesome/free-solid-svg-icons";

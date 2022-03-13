@@ -3,10 +3,10 @@ import "./styles/App.css";
 import { Switch, Route } from "react-router-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 import NavBar from "./components/NavBar";
-import Home from "./components/Home";
+import Home from "./components/home/Home";
 import Blog from "./components/Blog";
 import Footer from "./components/Footer";
-import Books from "./components/Books";
+import Books from "./components/books/Books";
 
 const App = () => {
   return (

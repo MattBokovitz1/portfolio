@@ -8,7 +8,7 @@ const Tabled = styled.div`
   margin: auto;
   width: 70%;
   justify-content: center;
-  padding: 4% 0 0 0;
+  padding: 2% 0 6% 0;
 `;
 
 export default function BooksPotential() {

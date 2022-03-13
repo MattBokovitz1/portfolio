@@ -11,7 +11,7 @@ import {
   ProjectLinks,
   WhiteFont,
   ProjectDiv,
-} from "../styles/StyledComponents";
+} from "../../styles/StyledComponents";
 
 const ProjectDetails = ({ project }) => {
   return (

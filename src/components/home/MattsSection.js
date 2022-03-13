@@ -5,10 +5,10 @@ import {
   Bio,
   MattSection,
   Matt,
-} from "../styles/StyledComponents";
+} from "../../styles/StyledComponents";
 
-import matt from "../assets/Matt.png";
-import smallprofile from "../assets/SmallProfile.png";
+import matt from "../../assets/Matt.png";
+import smallprofile from "../../assets/SmallProfile.png";
 
 export default function MattsSection() {
   return (
@@ -20,11 +20,10 @@ export default function MattsSection() {
         <Bio>
           I'm passionate about innovation and driven to help others. I am
           looking for an opportunity to make a significant contribution to an
-          interesting, complex project. <br></br>
+          interesting, complex project.
           <br></br>I am a Web Developer in Philadelphia, PA. My current tech
           stack includes React.js and Node.js. I enjoy making websites with
           clean and easily navigable designs.
-          <br></br>
           <br></br>
           Also, a large reason for creating this site was to provide a space to
           share my writing. I plan on writing about ideas and bits of life that

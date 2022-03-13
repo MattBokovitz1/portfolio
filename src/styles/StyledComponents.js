@@ -13,6 +13,9 @@ export const Links = styled(Link)`
   justify-content: center;
   align-items: center;
   font-size: 2rem;
+  @media (max-width: 850px) {
+    display: none;
+  }
 `;
 
 export const OutsideLinks = styled.a`
@@ -72,8 +75,8 @@ export const Nav = styled.nav`
 
 export const LinksDiv = styled.div`
   display: flex;
-  justify-content: space-around;
-  width: 32%;
+  justify-content: space-evenly;
+  width: 70%;
   font-size: 1rem;
   color: black;
   text-decoration: none;
