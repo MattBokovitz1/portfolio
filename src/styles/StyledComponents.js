@@ -310,8 +310,9 @@ export const Arrow = styled.a`
 `;
 
 export const IndividualProject = styled.div`
-  padding: 0 0 20% 0%;
+  padding: 0 0 10% 0%;
   border-bottom: 1px black;
+  display: flex;
   @media (max-width: 1000px) {
     display: block;
     padding: 10% 0 15% 0;
