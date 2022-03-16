@@ -111,8 +111,8 @@ export default function BooksRead() {
   return (
     <>
       <Tabled>
-        <PageHeader title="Books that I've read" />
-        <Table dataSource={books} columns={columns} />
+        <PageHeader title="Books that I have read" className="font-link" />
+        <Table dataSource={books} columns={columns} className="font-link" />
       </Tabled>
     </>
   );

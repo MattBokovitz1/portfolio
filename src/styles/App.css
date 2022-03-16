@@ -204,3 +204,7 @@ table {
     display: none;
   }
 }
+
+.font-link {
+  font-family: "PT Sans Narrow", sans-serif;
+}

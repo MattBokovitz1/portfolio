@@ -44,6 +44,7 @@ export const NameLink = styled(Link)`
 
 export const Name = styled.h1`
   font-size: 1.7rem;
+
   color: #101010;
   @media (max-width: 650px) {
     font-size: 1.2rem;
@@ -110,7 +111,8 @@ export const TooltipIcon = styled.div`
 
 export const TooltipText = styled.div`
   font-size: 1.25rem;
-  font-family: "Oswald", sans-serif;
+
+  font-family: "PT Sans Narrow", sans-serif;
 `;
 
 export const AboutSection = styled.div`
