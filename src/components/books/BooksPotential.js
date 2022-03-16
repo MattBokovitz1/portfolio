@@ -68,8 +68,8 @@ export default function BooksPotential() {
   return (
     <>
       <Tabled>
-        <PageHeader title="Books that I want to read" />
-        <Table dataSource={potential} columns={columns} />
+        <PageHeader title="Books that I want to read" className="font-link" />
+        <Table dataSource={potential} columns={columns} className="font-link" />
       </Tabled>
     </>
   );
