@@ -64,7 +64,7 @@ export default function BooksPotential() {
     {
       title: "Rating",
       dataIndex: "rating",
-      sorter: (a, b) => a.rating - b.rating,
+      sorter: (a, b) => b.rating - a.rating,
     },
   ];
 
