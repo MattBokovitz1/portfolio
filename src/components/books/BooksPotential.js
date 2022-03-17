@@ -13,10 +13,13 @@ const Tabled = styled.div`
 
 export default function BooksPotential() {
   const [potential, setPotential] = useState([]);
+  const [loading, setLoading] = useState(false);
   const getBooksPotential = () => {
+    setLoading(true);
     axios
       .get("https://polar-everglades-82309.herokuapp.com/potential/")
       .then((res) => {
+        setLoading(false);
         setPotential(res.data.data);
       }, [])
       .catch((err) => {
@@ -69,7 +72,12 @@ export default function BooksPotential() {
     <>
       <Tabled>
         <PageHeader title="Books that I want to read" className="font-link" />
-        <Table dataSource={potential} columns={columns} className="font-link" />
+        <Table
+          dataSource={potential}
+          columns={columns}
+          loading={loading}
+          className="font-link"
+        />
       </Tabled>
     </>
   );
