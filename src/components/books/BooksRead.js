@@ -12,11 +12,14 @@ const Tabled = styled.div`
 `;
 
 export default function BooksRead() {
+  const [loading, setLoading] = useState(false);
   const [books, setBooks] = useState([]);
   const getBooksRead = () => {
+    setLoading(true);
     axios
       .get("https://polar-everglades-82309.herokuapp.com/books/")
       .then((res) => {
+        setLoading(false);
         setBooks(res.data.data);
       }, [])
       .catch((err) => {
@@ -112,7 +115,12 @@ export default function BooksRead() {
     <>
       <Tabled>
         <PageHeader title="Books that I have read" className="font-link" />
-        <Table dataSource={books} columns={columns} className="font-link" />
+        <Table
+          dataSource={books}
+          columns={columns}
+          loading={loading}
+          className="font-link"
+        />
       </Tabled>
     </>
   );
