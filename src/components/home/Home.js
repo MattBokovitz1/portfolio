@@ -69,13 +69,13 @@ function Home() {
               clients can view the classes. Front end deployed to vercel and
               node backend to heroku.
               <br></br>
-              <ProjectLinks href="https://workout-store.vercel.app/">
+              <ProjectLinks href="https://fitness-club.vercel.app/">
                 <WhiteFont>
                   Deployed Application
                   <FontAwesomeIcon icon={faRocket} />
                 </WhiteFont>
               </ProjectLinks>
-              <ProjectLinks href="https://github.com/MattBokovitz1/workout-store">
+              <ProjectLinks href="https://github.com/MattBokovitz1/FitnessClub">
                 <WhiteFont>
                   Github Repository
                   <FontAwesomeIcon icon={faGithub} />
