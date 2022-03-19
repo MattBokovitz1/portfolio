@@ -63,12 +63,12 @@ export default function BooksRead() {
       dataIndex: "date",
       filters: [
         {
-          text: "2021",
-          value: "2021",
-        },
-        {
           text: "2020",
           value: "2020",
+        },
+        {
+          text: "2021",
+          value: "2021",
         },
         {
           text: "2022",
