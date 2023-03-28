@@ -196,6 +196,14 @@ const pastBooks = [
     rating: "9",
     topic: "History",
   },
+  {
+    id: 27,
+    title: "Lifespan",
+    author: "David Sinclair",
+    date: "2023",
+    rating: "10",
+    topic: "Biology",
+  },
 ];
 
 export default pastBooks;
