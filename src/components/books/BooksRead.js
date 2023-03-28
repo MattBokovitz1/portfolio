@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
 import { Table, PageHeader } from "antd";
 import styled from "styled-components";
+import pastBooks from "../../data/pastbooks";
 
 const Tabled = styled.div`
   margin: auto;
@@ -12,24 +11,7 @@ const Tabled = styled.div`
 `;
 
 export default function BooksRead() {
-  const [loading, setLoading] = useState(false);
-  const [books, setBooks] = useState([]);
-  const getBooksRead = () => {
-    setLoading(true);
-    axios
-      .get("https://polar-everglades-82309.herokuapp.com/books/")
-      .then((res) => {
-        setLoading(false);
-        setBooks(res.data.data);
-      }, [])
-      .catch((err) => {
-        console.log(err);
-      });
-  };
-
-  useEffect(() => {
-    getBooksRead();
-  }, []);
+  const books = pastBooks;
 
   const columns = [
     {
@@ -115,12 +97,7 @@ export default function BooksRead() {
     <>
       <Tabled>
         <PageHeader title="Books that I have read" className="font-link" />
-        <Table
-          dataSource={books}
-          columns={columns}
-          loading={loading}
-          className="font-link"
-        />
+        <Table dataSource={books} columns={columns} className="font-link" />
       </Tabled>
     </>
   );
