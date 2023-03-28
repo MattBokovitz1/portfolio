@@ -6,7 +6,7 @@ function Footer() {
   return (
     <>
       <Sailboat src={boat}></Sailboat>
-      <Bottom>| Matt Bokovitz - 2022 |</Bottom>
+      <Bottom>| Matt Bokovitz - 2023 |</Bottom>
     </>
   );
 }
