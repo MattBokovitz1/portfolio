@@ -7,7 +7,6 @@ const potentialBooks = [
     rating: "10",
     topic: "Mathematics",
   },
-
   {
     id: 2,
     title: "The Bible",
@@ -32,15 +31,6 @@ const potentialBooks = [
     rating: "10",
     topic: "History",
   },
-  {
-    id: 5,
-    title: "Lifespan",
-    author: "David Sinclair",
-    date: "2022",
-    rating: "7",
-    topic: "Biology and Health",
-  },
-
   {
     id: 7,
     title: "History of The World War",
@@ -112,6 +102,22 @@ const potentialBooks = [
     date: "2022",
     rating: "9",
     topic: "Classics",
+  },
+  {
+    id: 16,
+    title: "The Structure of Scientific Revolutions",
+    author: "Thomas Kuhn",
+    date: "2023",
+    rating: "8",
+    topic: "Philosophy",
+  },
+  {
+    id: 17,
+    title: "The Road to Reality",
+    author: "Roger Penrose",
+    date: "2023",
+    rating: "9",
+    topic: "Science",
   },
 ];
 
