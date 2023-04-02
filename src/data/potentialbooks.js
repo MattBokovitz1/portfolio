@@ -119,6 +119,30 @@ const potentialBooks = [
     rating: "9",
     topic: "Science",
   },
+  {
+    id: 18,
+    title: "Introduction to Electrodynamics",
+    author: "David J Griffiths",
+    date: "2023",
+    rating: "9",
+    topic: "Science",
+  },
+  {
+    id: 19,
+    title: "Differential Equations & Linear Algebra",
+    author: "Stephen W. Goode",
+    date: "2023",
+    rating: "9",
+    topic: "Mathematics",
+  },
+  {
+    id: 17,
+    title: "Macroeconomics",
+    author: "Gregory Mankiw",
+    date: "2023",
+    rating: "9",
+    topic: "Science",
+  },
 ];
 
 export default potentialBooks;
