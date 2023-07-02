@@ -44,12 +44,12 @@ function NavBar() {
       </Description>
       <LinksDiv>
         <Links
-          to="/blog"
-          onMouseOver={() => showTooltip("Blog  ")}
-          onFocus={() => showTooltip("Blog  ")}
+          to="/essays"
+          onMouseOver={() => showTooltip("Essays  ")}
+          onFocus={() => showTooltip("Essays  ")}
           onMouseLeave={hideTooltip}
           onBlur={hideTooltip}
-          aria-label="Matt's Blog"
+          aria-label="Matt's Essays"
         >
           <FontAwesomeIcon icon={faPencilAlt} />
         </Links>

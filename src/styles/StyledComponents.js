@@ -143,7 +143,7 @@ export const MattSection = styled.div`
   }
 `;
 
-export const BlogTitle = styled.h2`
+export const EssayTitle = styled.h2`
   width: 100%;
   padding: 0 0 3% 0;
   font-size: 3rem;
@@ -152,11 +152,47 @@ export const BlogTitle = styled.h2`
   color: #101010;
 `;
 
+export const EssaySubtitle = styled.h3`
+  width: 100%;
+  padding: 0 0 3% 0;
+  font-size: 2rem;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: normal;
+  color: #101010;
+`;
+
+export const EssayBody = styled.p`
+  padding: 0 20% 3% 20%;
+  font-size: 1.5rem;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: normal;
+  color: #101010;
+`;
+
+export const EssaySection2 = styled.div`
+  width: 100%;
+  padding: 3% 0 5% 5%;
+  border-bottom: 1px solid black;
+`;
+
+export const EssaySection = styled.div`
+  width: 100%;
+  padding: 3% 0 5% 5%;
+`;
+
+export const Essay = styled.div`
+  width: 100%;
+  padding: 0 0 3% 0;
+  font-size: 1.5rem;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: normal;
+  color: #101010;
+`;
+
 export const ProfilePicture = styled.img`
-  width: 40%;
-  height: 40%;
+  width: 30vw;
+  height: 40vh;
   justify-content: space-between;
-  vertical-align: middle;
 
   @media (max-width: 1000px) {
     width: 60%;

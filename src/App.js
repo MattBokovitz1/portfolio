@@ -4,7 +4,7 @@ import { Switch, Route } from "react-router-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import Home from "./components/home/Home";
-import Blog from "./components/Blog";
+import Essays from "./components/essays/Essays";
 import Footer from "./components/Footer";
 import Books from "./components/books/Books";
 
@@ -15,7 +15,7 @@ const App = () => {
         <NavBar />
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/blog" component={Blog} />
+          <Route path="/essays" component={Essays} />
           <Route path="/books" component={Books} />
         </Switch>
         <Footer />
