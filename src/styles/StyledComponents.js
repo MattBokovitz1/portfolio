@@ -193,6 +193,7 @@ export const ProfilePicture = styled.img`
   width: 30vw;
   height: 40vh;
   justify-content: space-between;
+  vertical-align: middle;
 
   @media (max-width: 1000px) {
     width: 60%;
