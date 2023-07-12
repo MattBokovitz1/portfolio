@@ -205,7 +205,7 @@ const pastBooks = [
   },
   {
     id: 28,
-    title: "Linear Alebra A Modern Introduction",
+    title: "Linear Algebra A Modern Introduction",
     author: "David Poole",
     date: "2019",
     rating: "8",
