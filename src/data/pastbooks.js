@@ -7,7 +7,6 @@ const pastBooks = [
     rating: "10",
     topic: "Psychology",
   },
-
   {
     id: 2,
     title: "Transcend",
@@ -203,6 +202,14 @@ const pastBooks = [
     date: "2023",
     rating: "10",
     topic: "Biology",
+  },
+  {
+    id: 28,
+    title: "Linear Alebra A Modern Introduction",
+    author: "David Poole",
+    date: "2019",
+    rating: "8",
+    topic: "Mathematics",
   },
 ];
 
