@@ -35,6 +35,10 @@ export default function BooksRead() {
           text: "Homer",
           value: "Homer",
         },
+        {
+          text: "Albert Camus",
+          value: "Albert Camus",
+        },
       ],
       onFilter: (value, record) => record.author.startsWith(value),
       filterSearch: true,
@@ -44,6 +48,18 @@ export default function BooksRead() {
       title: "Year Read",
       dataIndex: "date",
       filters: [
+        {
+          text: "2017",
+          value: "2017",
+        },
+        {
+          text: "2018",
+          value: "2018",
+        },
+        {
+          text: "2019",
+          value: "2019",
+        },
         {
           text: "2020",
           value: "2020",
@@ -87,6 +103,14 @@ export default function BooksRead() {
         {
           text: "Classics",
           value: "Classics",
+        },
+        {
+          text: "Philosophy",
+          value: "Philosophy",
+        },
+        {
+          text: "Politics",
+          value: "Politics",
         },
       ],
     },
