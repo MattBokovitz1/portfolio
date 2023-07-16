@@ -143,6 +143,14 @@ const potentialBooks = [
     rating: "9",
     topic: "Science",
   },
+  {
+    id: 18,
+    title: "Seminar on Nietzsche's Zarathustra",
+    author: "Carl Jung",
+    date: "2023",
+    rating: "9",
+    topic: "Philosophy",
+  },
 ];
 
 export default potentialBooks;
