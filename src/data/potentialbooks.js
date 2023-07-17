@@ -151,6 +151,14 @@ const potentialBooks = [
     rating: "9",
     topic: "Philosophy",
   },
+  {
+    id: 19,
+    title: "Revolutionary Writings 1755-1775",
+    author: "John Adams",
+    date: "2023",
+    rating: "9",
+    topic: "History",
+  },
 ];
 
 export default potentialBooks;
