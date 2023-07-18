@@ -38,12 +38,6 @@ function Home() {
               particular judge and maximize their client's chances of receiving
               asylum.
               <br></br>
-              <ProjectLinks href="https://a.humanrightsfirstasylum.dev/login">
-                <WhiteFont>
-                  Deployed Application
-                  <FontAwesomeIcon icon={faRocket} />
-                </WhiteFont>
-              </ProjectLinks>
               <ProjectLinks href="https://github.com/Lambda-School-Labs/human-rights-first-asylum-fe-a">
                 <WhiteFont>
                   Github Repository
@@ -117,12 +111,6 @@ function Home() {
               to add, edit, and delete plant information when logged into
               profile. Connected to quotes API which displays pleasant quote on
               login page.<br></br>
-              <ProjectLinks href="https://water-my-plants-tau.vercel.app/">
-                <WhiteFont>
-                  Deployed Application
-                  <FontAwesomeIcon icon={faRocket} />
-                </WhiteFont>
-              </ProjectLinks>
               <ProjectLinks href="https://github.com/Build-Wk-Water-My-Plants/front-end">
                 <WhiteFont>
                   Github Repository
