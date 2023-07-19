@@ -20,7 +20,7 @@ export const Links = styled(Link)`
 
 export const OutsideLinks = styled.a`
   text-decoration: none;
-  color: 4169e1;
+  color: #101010;
   display: flex;
   justify-content: center;
   align-items: center;
