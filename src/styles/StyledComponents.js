@@ -32,7 +32,7 @@ export const OutsideLinks = styled.a`
 
 export const Description = styled.nav`
   text-align: left;
-  font-family: "PT Sans Narrow", sans-serif;
+  font-family: "Rubik", sans-serif;
   padding: 0 0 0 12.5%;
   text-decoration: none;
 `;
@@ -68,7 +68,7 @@ export const Nav = styled.nav`
   width: 100%;
   z-index: 100;
   line-height: 1.5;
-  font-family: "PT Sans Narrow", sans-serif;
+  font-family: "Rubik", sans-serif;
   @media (max-width: 500px) {
     padding: 5% 0 5% 0;
   }
@@ -112,7 +112,7 @@ export const TooltipIcon = styled.div`
 export const TooltipText = styled.div`
   font-size: 1.25rem;
 
-  font-family: "PT Sans Narrow", sans-serif;
+  font-family: "Rubik", sans-serif;
 `;
 
 export const AboutSection = styled.div`
@@ -124,7 +124,7 @@ export const Matt = styled.h2`
   width: 100%;
   padding: 3% 0 3% 0;
   font-size: 3rem;
-  font-family: "PT Sans Narrow", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: normal;
   color: #101010;
   @media (max-width: 1050px) {
@@ -147,7 +147,7 @@ export const EssayTitle = styled.h2`
   width: 100%;
   padding: 0 0 3% 0;
   font-size: 3rem;
-  font-family: "PT Sans Narrow", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: normal;
   color: #101010;
 `;
@@ -156,7 +156,7 @@ export const EssaySubtitle = styled.h3`
   width: 100%;
   padding: 0 0 3% 0;
   font-size: 2rem;
-  font-family: "PT Sans Narrow", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: normal;
   color: #101010;
 `;
@@ -164,7 +164,7 @@ export const EssaySubtitle = styled.h3`
 export const EssayBody = styled.p`
   padding: 0 20% 3% 20%;
   font-size: 1.5rem;
-  font-family: "PT Sans Narrow", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: normal;
   color: #101010;
 `;
@@ -184,7 +184,7 @@ export const Essay = styled.div`
   width: 100%;
   padding: 0 0 3% 0;
   font-size: 1.5rem;
-  font-family: "PT Sans Narrow", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: normal;
   color: #101010;
 `;
@@ -228,7 +228,7 @@ export const SmallProfile = styled.img`
 export const Bio = styled.p`
   justify-content: space-evenly;
   margin: 2% 5% 0 10%;
-  font-family: "PT Sans Narrow", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-size: 1.3rem;
   color: #101010;
   text-align: left;
@@ -253,7 +253,7 @@ export const Bio = styled.p`
 export const Projects = styled.h2`
   width: 100%;
   padding: 10% 0 8% 0;
-  font-family: "PT Sans Narrow", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-size: 3rem;
   font-weight: normal;
   color: #101010;
@@ -266,7 +266,7 @@ export const Projects = styled.h2`
 `;
 
 export const ProjectTitle = styled.h3`
-  font-family: "PT Sans Narrow", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-size: 2rem;
   font-weight: bold;
   line-height: 1.5;
@@ -281,7 +281,7 @@ export const ProjectTitle = styled.h3`
 export const ProjectDescription = styled.p`
   margin: 3% 0 3% 0;
 
-  font-family: "PT Sans Narrow", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-size: 1.3rem;
   color: #101010;
   line-height: 1.4;
@@ -293,18 +293,19 @@ export const ProjectDescription = styled.p`
 
 export const ProjectLinks = styled.a`
   text-decoration: none;
-  color: #f8f8ff;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 2rem;
   border: 1px solid #101010;
   margin: 2% 28% 4% 28%;
-  background: #101010;
+  background: #4169e1;
   &:hover {
-    background: white;
-    color: black;
+    color: white;
     border: 1px solid black;
+    transform: scale(1.1);
+    transition: 0.5s;
   }
 
   @media (max-width: 1150px) {
@@ -322,12 +323,12 @@ export const ProjectLinks = styled.a`
 
 export const WhiteFont = styled.p`
   margin: 3% 0 3% 0;
-  font-family: "PT Sans Narrow", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-size: 1.3rem;
   line-height: 1.4;
   &:hover {
-    background: white;
-    color: black;
+    background: #4169e1;
+    color: #f8f8ff;
   }
 
   @media (max-width: 500px) {
@@ -365,7 +366,7 @@ export const IndividualProject = styled.div`
 export const LeftProject = styled.div`
   justify-content: space-evenly;
   margin: 0 10% 0 0;
-  font-family: "PT Sans Narrow", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-size: 1.3rem;
   text-align: left;
   color: #101010;
@@ -418,11 +419,11 @@ export const Button = styled.button`
   font-size: 1rem;
   box-sizing: border-box;
   text-decoration: none;
-  color: #ffffff;
+  color: #4169e1;
   text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
   text-align: center;
   transition: all 0.2s;
-  background: #8db596;
+  background: #4169e1;
 `;
 
 export const Quote = styled.div`
@@ -445,7 +446,7 @@ export const Sailboat = styled.img`
 export const Bottom = styled.div`
   padding: 10% 0 0 0;
   font-size: 2rem;
-  font-family: "PT Sans Narrow", sans-serif;
+  font-family: "Rubik", sans-serif;
   @media (max-width: 500px) {
     font-size: 1rem;
   }
