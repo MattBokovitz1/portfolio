@@ -43,7 +43,7 @@ export const NameLink = styled(Link)`
 `;
 
 export const Name = styled.h1`
-  font-size: 1.7rem;
+  font-size: 1.5rem;
 
   color: #101010;
   @media (max-width: 650px) {
@@ -52,7 +52,7 @@ export const Name = styled.h1`
 `;
 
 export const Role = styled.h2`
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   padding: 2% 0 0 0;
   color: #101010;
   @media (max-width: 650px) {
@@ -302,8 +302,10 @@ export const ProjectLinks = styled.a`
   background: #4169e1;
   &:hover {
     background: #4169e1;
-    color: black;
+    color: white;
     border: 1px solid black;
+    scale: 1.1;
+    transition: 0.5s;
   }
 
   @media (max-width: 1150px) {
@@ -442,8 +444,8 @@ export const Sailboat = styled.img`
 `;
 
 export const Bottom = styled.div`
-  padding: 10% 0 0 0;
-  font-size: 2rem;
+  padding: 5% 0 5% 0;
+  font-size: 1rem;
   font-family: "Rubik", sans-serif;
   @media (max-width: 500px) {
     font-size: 1rem;
