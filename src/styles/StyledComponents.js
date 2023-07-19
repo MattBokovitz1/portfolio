@@ -300,11 +300,13 @@ export const ProjectLinks = styled.a`
   font-size: 2rem;
   border: 1px solid #101010;
   margin: 2% 28% 4% 28%;
-  background: #101010;
+  background: #4169e1;
   &:hover {
-    background: white;
-    color: black;
+    background: 4169e1;
+    color: #f8f8ff;
     border: 1px solid black;
+    transition: 0.5s;
+    transform: scale(1.1);
   }
 
   @media (max-width: 1150px) {
@@ -326,8 +328,8 @@ export const WhiteFont = styled.p`
   font-size: 1.3rem;
   line-height: 1.4;
   &:hover {
-    background: white;
-    color: black;
+    background: 4169e1;
+    color: #f8f8ff;
   }
 
   @media (max-width: 500px) {
