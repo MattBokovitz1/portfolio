@@ -325,7 +325,7 @@ export const ProjectLinks = styled.a`
 export const WhiteFont = styled.p`
   margin: 3% 0 3% 0;
   font-family: "PT Sans Narrow", sans-serif;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   line-height: 1.4;
   &:hover {
     background: 4169e1;
@@ -413,10 +413,10 @@ export const ProjectDiv = styled.div`
 
 export const Button = styled.button`
   display: inline-block;
-  padding: 0.3em 1.2em;
+  padding: 0.2em 0.5em;
   margin: 0 0.1em 2.1em 0;
   border: 0.16em solid rgba(255, 255, 255, 0);
-  border-radius: 2em;
+  border-radius: 1em;
   font-size: 1rem;
   box-sizing: border-box;
   text-decoration: none;
