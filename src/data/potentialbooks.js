@@ -159,6 +159,22 @@ const potentialBooks = [
     rating: "9",
     topic: "History",
   },
+  {
+    id: 20,
+    title: "The Federalist Papers",
+    author: "Alexander Hamilton",
+    date: "2023",
+    rating: "9",
+    topic: "History",
+  },
+  {
+    id: 21,
+    title: "The Pragmatic Programmer",
+    author: "Andrew Hunt",
+    date: "2023",
+    rating: "9",
+    topic: "Computer Science",
+  },
 ];
 
 export default potentialBooks;
