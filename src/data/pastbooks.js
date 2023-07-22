@@ -427,6 +427,14 @@ const pastBooks = [
     rating: "9",
     topic: "Philosophy",
   },
+  {
+    id: 56,
+    title: "Why Nations Fail",
+    author: "Daron Acemoglu",
+    date: "2018",
+    rating: "9",
+    topic: "Economics",
+  },
 ];
 
 export default pastBooks;
