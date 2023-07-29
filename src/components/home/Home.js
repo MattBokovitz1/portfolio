@@ -31,8 +31,8 @@ function Home() {
           <LeftProject>
             <ProjectTitle>Human Rights First: Asylum</ProjectTitle>
             <ProjectDescription>
-              Human Rights First (HRF) works to link immigration attorneys with
-              asylum seekers and provide those attorneys with resources to best
+              Human Rights First (HRF) links immigration attorneys with asylum
+              seekers and provide those attorneys with the best resources to
               represent their clients. The hope is that advocates for asylum
               seekers can use our tools to tailor their arguments before a
               particular judge and maximize their client's chances of receiving
@@ -56,12 +56,11 @@ function Home() {
           <LeftProject>
             <ProjectTitle>Fitness Club</ProjectTitle>
             <ProjectDescription>
-              React Web application for fitness coach to use to market classes
-              and for athletes to find out about upcoming fitness events in
-              their area. Users can register as admins or clients and then sign
-              in. Admins can create, edit, and delete workout classes, and
-              clients can view the classes. Front end deployed to vercel and
-              node backend to heroku.
+              React Web application for fitness coach to market classes and for
+              athletes to find out about upcoming fitness events in their area.
+              Users can register as coach or athlete and then sign in. Coach can
+              create, edit, and delete workout classes, and athlete can view the
+              classes. Front end deployed to vercel and node backend to heroku.
               <br></br>
               <ProjectLinks href="https://fitness-club.vercel.app/">
                 <WhiteFont>
@@ -83,10 +82,10 @@ function Home() {
           <LeftProject>
             <ProjectTitle>NASA Photo Of Day</ProjectTitle>
             <ProjectDescription>
-              React Web application that allows user to select a date and view
-              the NASA photo of the day. A description of the photo of the day
-              is included on the page to provide context to what the user is
-              viewing.<br></br>
+              React Web application to view the NASA photo of the day and
+              utilizes datepicker to select previous photos. A description of
+              the photo of the day is included on the page.
+              <br></br>
               <ProjectLinks href="https://nasa-photo-of-the-day-chi-one.vercel.app/">
                 <WhiteFont>
                   Deployed Application
