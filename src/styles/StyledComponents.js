@@ -32,7 +32,7 @@ export const OutsideLinks = styled.a`
 
 export const Description = styled.nav`
   text-align: left;
-  font-family: "PT Sans Narrow", sans-serif;
+  font-family: "Roboto Mono", monospace;
   padding: 0 0 0 12.5%;
   text-decoration: none;
 `;
@@ -68,7 +68,7 @@ export const Nav = styled.nav`
   width: 100%;
   z-index: 100;
   line-height: 1.5;
-  font-family: "PT Sans Narrow", sans-serif;
+  font-family: "Roboto Mono", monospace;
   @media (max-width: 500px) {
     padding: 5% 0 5% 0;
   }
@@ -111,8 +111,7 @@ export const TooltipIcon = styled.div`
 
 export const TooltipText = styled.div`
   font-size: 1.25rem;
-
-  font-family: "PT Sans Narrow", sans-serif;
+  font-family: "Roboto Mono", monospace;
 `;
 
 export const AboutSection = styled.div`
@@ -124,7 +123,7 @@ export const Matt = styled.h2`
   width: 100%;
   padding: 3% 0 3% 0;
   font-size: 3rem;
-  font-family: "PT Sans Narrow", sans-serif;
+  font-family: "Roboto Mono", monospace;
   font-weight: normal;
   color: #101010;
   @media (max-width: 1050px) {
@@ -147,7 +146,7 @@ export const EssayTitle = styled.h2`
   width: 100%;
   padding: 0 0 3% 0;
   font-size: 3rem;
-  font-family: "PT Sans Narrow", sans-serif;
+  font-family: "Roboto Mono", monospace;
   font-weight: normal;
   color: #101010;
 `;
@@ -156,7 +155,7 @@ export const EssaySubtitle = styled.h3`
   width: 100%;
   padding: 0 0 3% 0;
   font-size: 2rem;
-  font-family: "PT Sans Narrow", sans-serif;
+  font-family: "Roboto Mono", monospace;
   font-weight: normal;
   color: #101010;
 `;
@@ -164,7 +163,7 @@ export const EssaySubtitle = styled.h3`
 export const EssayBody = styled.p`
   padding: 0 20% 3% 20%;
   font-size: 1.5rem;
-  font-family: "PT Sans Narrow", sans-serif;
+  font-family: "Roboto Mono", monospace;
   font-weight: normal;
   color: #101010;
 `;
@@ -184,7 +183,7 @@ export const Essay = styled.div`
   width: 100%;
   padding: 0 0 3% 0;
   font-size: 1.5rem;
-  font-family: "PT Sans Narrow", sans-serif;
+  font-family: "Roboto Mono", monospace;
   font-weight: normal;
   color: #101010;
 `;
@@ -228,18 +227,17 @@ export const SmallProfile = styled.img`
 export const Bio = styled.p`
   justify-content: space-evenly;
   margin: 2% 5% 0 10%;
-  font-family: "PT Sans Narrow", sans-serif;
-  font-size: 1.3rem;
+  font-family: "Roboto Mono", monospace;
   color: #101010;
   text-align: left;
   line-height: 1.4;
 
   @media (min-width: 1600px) {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
 
   @media (min-width: 1100px) {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
   }
 
   @media (max-width: 800px) {
@@ -253,8 +251,8 @@ export const Bio = styled.p`
 export const Projects = styled.h2`
   width: 100%;
   padding: 10% 0 8% 0;
-  font-family: "PT Sans Narrow", sans-serif;
-  font-size: 3rem;
+  font-family: "Roboto Mono", monospace;
+  font-size: 2rem;
   font-weight: normal;
   color: #101010;
   @media (max-width: 800px) {
@@ -266,8 +264,8 @@ export const Projects = styled.h2`
 `;
 
 export const ProjectTitle = styled.h3`
-  font-family: "PT Sans Narrow", sans-serif;
-  font-size: 2rem;
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.8rem;
   font-weight: bold;
   line-height: 1.5;
   color: #101010;
@@ -280,9 +278,8 @@ export const ProjectTitle = styled.h3`
 
 export const ProjectDescription = styled.p`
   margin: 3% 0 3% 0;
-
-  font-family: "PT Sans Narrow", sans-serif;
-  font-size: 1.3rem;
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.1rem;
   color: #101010;
   line-height: 1.4;
   @media (max-width: 500px) {
@@ -297,9 +294,9 @@ export const ProjectLinks = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
+  font-size: 1rem;
   border: 1px solid #101010;
-  margin: 2% 28% 4% 28%;
+  margin: 2% 24% 4% 24%;
   background: #4169e1;
   &:hover {
     background: 4169e1;
@@ -324,8 +321,8 @@ export const ProjectLinks = styled.a`
 
 export const WhiteFont = styled.p`
   margin: 3% 0 3% 0;
-  font-family: "PT Sans Narrow", sans-serif;
-  font-size: 1.2rem;
+  font-family: "Roboto Mono", monospace;
+  font-size: 1rem;
   line-height: 1.4;
   &:hover {
     background: 4169e1;
@@ -367,7 +364,7 @@ export const IndividualProject = styled.div`
 export const LeftProject = styled.div`
   justify-content: space-evenly;
   margin: 0 10% 0 0;
-  font-family: "PT Sans Narrow", sans-serif;
+  font-family: "Roboto Mono", monospace;
   font-size: 1.3rem;
   text-align: left;
   color: #101010;
@@ -447,7 +444,7 @@ export const Sailboat = styled.img`
 export const Bottom = styled.div`
   padding: 10% 0 0 0;
   font-size: 2rem;
-  font-family: "PT Sans Narrow", sans-serif;
+  font-family: "Roboto Mono", monospace;
   @media (max-width: 500px) {
     font-size: 1rem;
   }
