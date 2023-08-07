@@ -122,7 +122,7 @@ export const AboutSection = styled.div`
 export const Matt = styled.h2`
   width: 100%;
   padding: 3% 0 3% 0;
-  font-size: 3rem;
+  font-size: 2rem;
   font-family: "Roboto Mono", monospace;
   font-weight: normal;
   color: #101010;
@@ -239,12 +239,14 @@ export const Bio = styled.p`
   @media (min-width: 1100px) {
     font-size: 1.1rem;
   }
+  @media (max-width: 1000px) {
+    font-size: .9rem;
 
   @media (max-width: 800px) {
     margin: 5% 0 0 0;
   }
   @media (max-width: 500px) {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
   }
 `;
 
@@ -283,8 +285,10 @@ export const ProjectDescription = styled.p`
   color: #101010;
   line-height: 1.4;
   @media (max-width: 500px) {
-    font-size: 1.1rem;
     text-align: left;
+  }
+  @media (max-width: 1000px) {
+    font-size: 0.9rem;
   }
 `;
 
@@ -294,7 +298,7 @@ export const ProjectLinks = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1rem;
+  font-size: 0.8rem;
   border: 1px solid #101010;
   margin: 2% 24% 4% 24%;
   background: #4169e1;
@@ -322,7 +326,7 @@ export const ProjectLinks = styled.a`
 export const WhiteFont = styled.p`
   margin: 3% 0 3% 0;
   font-family: "Roboto Mono", monospace;
-  font-size: 1rem;
+  font-size: 0.8rem;
   line-height: 1.4;
   &:hover {
     background: 4169e1;
@@ -330,7 +334,7 @@ export const WhiteFont = styled.p`
   }
 
   @media (max-width: 500px) {
-    font-size: 1.1rem;
+    font-size: 0.8rem;
     text-align: left;
   }
 `;
@@ -442,10 +446,10 @@ export const Sailboat = styled.img`
 `;
 
 export const Bottom = styled.div`
-  padding: 10% 0 0 0;
-  font-size: 2rem;
+  padding: 5% 0 2% 0;
+  font-size: 1.5rem;
   font-family: "Roboto Mono", monospace;
   @media (max-width: 500px) {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 `;

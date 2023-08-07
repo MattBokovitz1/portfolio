@@ -29,14 +29,11 @@ function Home() {
         <Projects>Projects</Projects>
         <IndividualProject>
           <LeftProject>
-            <ProjectTitle>Human Rights First: Asylum</ProjectTitle>
+            <ProjectTitle>Human Rights First</ProjectTitle>
             <ProjectDescription>
               Human Rights First (HRF) links immigration attorneys with asylum
-              seekers and provide those attorneys with the best resources to
-              represent their clients. The hope is that advocates for asylum
-              seekers can use our tools to tailor their arguments before a
-              particular judge and maximize their client's chances of receiving
-              asylum.
+              seekers and provides those attorneys with the best resources to
+              represent their clients.
               <br></br>
               <ProjectLinks href="https://github.com/Lambda-School-Labs/human-rights-first-asylum-fe-a">
                 <WhiteFont>
@@ -58,9 +55,7 @@ function Home() {
             <ProjectDescription>
               React Web application for fitness coach to market classes and for
               athletes to find out about upcoming fitness events in their area.
-              Users can register as coach or athlete and then sign in. Coach can
-              create, edit, and delete workout classes, and athlete can view the
-              classes. Front end deployed to vercel and node backend to heroku.
+              Front end deployed to vercel and node backend to heroku.
               <br></br>
               <ProjectLinks href="https://fitness-club.vercel.app/">
                 <WhiteFont>
