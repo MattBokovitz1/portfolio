@@ -435,6 +435,14 @@ const pastBooks = [
     rating: "9",
     topic: "Economics",
   },
+  {
+    id: 57,
+    title: "The History and Origins of Consciousness",
+    author: "Erich Neumann",
+    date: "2021",
+    rating: "10",
+    topic: "Psychology",
+  },
 ];
 
 export default pastBooks;
