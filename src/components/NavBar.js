@@ -40,7 +40,7 @@ function NavBar() {
         <NameLink to="/">
           <Name>Matt Bokovitz</Name>
         </NameLink>
-        <Role>Web Developer</Role>
+        <Role>Software Engineer</Role>
       </Description>
       <LinksDiv>
         <Links
