@@ -16,7 +16,6 @@ import MattsSection from "../home/MattsSection";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRocket } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import plant from "../../assets/plantlogin.png";
 import nasa from "../../assets/nasa.png";
 import workout from "../../assets/workout.png";
 import hrf from "../../assets/HRF.png";
@@ -96,24 +95,6 @@ function Home() {
             </ProjectDescription>
           </LeftProject>
           <ProjectImg src={nasa} alt="NASA photo of day app"></ProjectImg>
-        </IndividualProject>
-        <IndividualProject>
-          <LeftProject>
-            <ProjectTitle>Water My Plants</ProjectTitle>
-            <ProjectDescription>
-              React Web application that catalogues a user's plants. Allows user
-              to add, edit, and delete plant information when logged into
-              profile. Connected to quotes API which displays pleasant quote on
-              login page.<br></br>
-              <ProjectLinks href="https://github.com/Build-Wk-Water-My-Plants/front-end">
-                <WhiteFont>
-                  Github Repository
-                  <FontAwesomeIcon icon={faGithub} />
-                </WhiteFont>
-              </ProjectLinks>
-            </ProjectDescription>
-          </LeftProject>
-          <ProjectImg src={plant} alt="Water My Plants App"></ProjectImg>
         </IndividualProject>
       </AboutSection>
     </>
