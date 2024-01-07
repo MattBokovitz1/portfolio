@@ -175,6 +175,14 @@ const potentialBooks = [
     rating: "9",
     topic: "Computer Science",
   },
+  {
+    id: 22,
+    title: "The Aeneid",
+    author: "Virgil",
+    date: "2024",
+    rating: "10",
+    topic: "Classics",
+  }
 ];
 
 export default potentialBooks;
