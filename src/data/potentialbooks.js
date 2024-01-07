@@ -5,7 +5,7 @@ const potentialBooks = [
     author: "Hilary Putnam",
     date: "2022",
     rating: "10",
-    topic: "Mathematics",
+    topic: "Mathematics"
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ const potentialBooks = [
     author: "-",
     date: "2022",
     rating: "10",
-    topic: "Religion",
+    topic: "Religion"
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ const potentialBooks = [
     author: "AJ Ayer",
     date: "2022",
     rating: "7",
-    topic: "Philosophy",
+    topic: "Philosophy"
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ const potentialBooks = [
     author: "Winston Churchill",
     date: "2022",
     rating: "10",
-    topic: "History",
+    topic: "History"
   },
   {
     id: 7,
