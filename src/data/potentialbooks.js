@@ -182,6 +182,22 @@ const potentialBooks = [
     date: "2024",
     rating: "10",
     topic: "Classics",
+  },
+  {
+    id: 23,
+    title: "Paradise Lost",
+    author: "John Milton",
+    date: "2024",
+    rating: "10",
+    topic: "Classics",
+  },
+  {
+    id: 24,
+    title: "Faust",
+    author: "Johann Wolfgang von Goethe",
+    date: "2024",
+    rating: "10",
+    topic: "Classics",
   }
 ];
 
