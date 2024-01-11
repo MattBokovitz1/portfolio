@@ -88,14 +88,6 @@ const potentialBooks = [
     topic: "Religion",
   },
   {
-    id: 14,
-    title: "Einstein",
-    author: "Walter Isaacson",
-    date: "2022",
-    rating: "9",
-    topic: "Biography",
-  },
-  {
     id: 15,
     title: "The Divine Comedy",
     author: "Dante",
