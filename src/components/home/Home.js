@@ -18,7 +18,6 @@ import { faRocket } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import nasa from "../../assets/nasa.png";
 import workout from "../../assets/workout.png";
-import hrf from "../../assets/HRF.png";
 function Home() {
   return (
     <>
@@ -26,28 +25,6 @@ function Home() {
       <AboutSection id="aboutsection">
         <MattsSection />
         <Projects>Projects</Projects>
-        <IndividualProject>
-          <LeftProject>
-            <ProjectTitle>Human Rights First</ProjectTitle>
-            <ProjectDescription>
-              Human Rights First (HRF) links immigration attorneys with asylum
-              seekers and provides those attorneys with the best resources to
-              represent their clients.
-              <br></br>
-              <ProjectLinks href="https://github.com/Lambda-School-Labs/human-rights-first-asylum-fe-a">
-                <WhiteFont>
-                  Github Repository
-                  <FontAwesomeIcon icon={faGithub} />
-                </WhiteFont>
-              </ProjectLinks>
-            </ProjectDescription>
-          </LeftProject>
-          <ProjectImg
-            class="hrf"
-            src={hrf}
-            alt="Human Rights First: Asylum Landing Page"
-          ></ProjectImg>
-        </IndividualProject>
         <IndividualProject>
           <LeftProject>
             <ProjectTitle>Fitness Club</ProjectTitle>
