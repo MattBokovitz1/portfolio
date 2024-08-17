@@ -161,8 +161,8 @@ export const EssaySubtitle = styled.h3`
 `;
 
 export const EssayBody = styled.p`
-  padding: 0 20% 3% 20%;
-  font-size: 1.5rem;
+  padding: 0 10% 3% 10%;
+  font-size: 1.25rem;
   font-family: "Roboto Mono", monospace;
   font-weight: normal;
   color: #101010;
