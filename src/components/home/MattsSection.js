@@ -20,9 +20,9 @@ export default function MattsSection() {
         <Bio>
           I'm passionate about innovation and driven to help others.
           <br></br>
-          <br></br>I am a Web Developer in Milwaukee, Wisconsin working for
-          Northwestern Mutual. My current tech stack includes React.js and
-          Node.js. My passions are technology, philosophy, history, science, and
+          <br></br>I am a Software Engineer in Milwaukee, Wisconsin working for
+          Northwestern Mutual. My current tech stack includes React.js,
+          Node.js, MySQL, and TypeScript. My passions are technology, philosophy, history, science, and
           psychology.
           <br></br>
           <br></br>
