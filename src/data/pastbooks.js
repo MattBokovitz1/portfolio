@@ -445,6 +445,14 @@ const pastBooks = [
     rating: "10",
     topic: "Psychology",
   },
+  {
+    id: 58,
+    title: "The Word on Fire Bible: The Gospels",
+    author: "Bishop Robert Barron",
+    date: "2024",
+    rating: "10",
+    topic: "Religion"
+  }
 ];
 
 export default pastBooks;

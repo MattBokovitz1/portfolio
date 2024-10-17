@@ -75,6 +75,10 @@ export default function BooksRead() {
           text: "2023",
           value: "2023",
         },
+        {
+          text: "2024",
+          value: "2024",
+        }
       ],
       onFilter: (value, record) => record.date.startsWith(value),
       filterSearch: true,

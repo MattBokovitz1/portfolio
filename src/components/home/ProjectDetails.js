@@ -21,7 +21,6 @@ const ProjectDetails = ({ project }) => {
           <ProjectTitle>{project.title}</ProjectTitle>
           <ProjectDescription>
             {project.description}
-
             <ProjectLinks href={project.project_link}>
               <WhiteFont>
                 Deployed Application
