@@ -1,4 +1,4 @@
-import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faSquareXTwitter } from "@fortawesome/free-brands-svg-icons";
 import {
   faEnvelope,
   faPencilAlt,
@@ -76,13 +76,13 @@ function NavBar() {
         </OutsideLinks>
         <OutsideLinks
           href="https://twitter.com/matt_bokovitz"
-          onMouseOver={() => showTooltip("Twitter  ")}
-          onFocus={() => showTooltip("Twitter  ")}
+          onMouseOver={() => showTooltip("X  ")}
+          onFocus={() => showTooltip("X  ")}
           onMouseLeave={hideTooltip}
           onBlur={hideTooltip}
-          aria-label="Matt's Twitter"
+          aria-label="Matt's X"
         >
-          <FontAwesomeIcon icon={faTwitter} />
+          <FontAwesomeIcon icon={faSquareXTwitter} />
         </OutsideLinks>
         <OutsideLinks
           href='mailto:matt.bokovitz1@gmail.com?subject="re: Portfolio'
