@@ -12,7 +12,10 @@ import potentialBooks from "../data/potentialbooks";
  */
 
 describe("Books component", () => {
+  let user;
+
   beforeEach(() => {
+    user = userEvent.setup();
     renderWithProviders(<Books />);
   });
 
@@ -30,8 +33,8 @@ describe("Books component", () => {
     ).toBeInTheDocument();
   });
 
-  it("switches to 'want to read' tab and shows correct count", () => {
-    userEvent.click(screen.getByText("Want to Read"));
+  it("switches to 'want to read' tab and shows correct count", async () => {
+    await user.click(screen.getByText("Want to Read"));
 
     const wantTab = screen.getByText("Want to Read");
     expect(wantTab).toHaveAttribute("aria-selected", "true");
@@ -50,14 +53,14 @@ describe("Books component", () => {
     expect(topicElements.length).toBeGreaterThan(0);
   });
 
-  it("filters books by topic", () => {
+  it("filters books by topic", async () => {
     const topic = pastBooks[0].topic;
     const expectedCount = pastBooks.filter((b) => b.topic === topic).length;
 
     // Click the filter chip (the first button with this topic text)
     const topicElements = screen.getAllByText(topic);
     const filterChip = topicElements.find((el) => el.tagName === "BUTTON");
-    userEvent.click(filterChip);
+    await user.click(filterChip);
 
     const suffix = expectedCount === 1 ? "book" : "books";
     expect(
@@ -65,15 +68,15 @@ describe("Books component", () => {
     ).toBeInTheDocument();
   });
 
-  it("resets filter when switching tabs", () => {
+  it("resets filter when switching tabs", async () => {
     // Filter by a topic first
     const topic = pastBooks[0].topic;
     const topicElements = screen.getAllByText(topic);
     const filterChip = topicElements.find((el) => el.tagName === "BUTTON");
-    userEvent.click(filterChip);
+    await user.click(filterChip);
 
     // Switch to want tab
-    userEvent.click(screen.getByText("Want to Read"));
+    await user.click(screen.getByText("Want to Read"));
 
     // Count should be all potential books
     expect(
@@ -88,30 +91,30 @@ describe("Books component", () => {
     expect(ratingElements.length).toBeGreaterThan(0);
   });
 
-  it("shows Year sort button only on read tab", () => {
+  it("shows Year sort button only on read tab", async () => {
     // On read tab, Year sort button should exist
     const yearButtons = screen.getAllByText("Year");
     expect(yearButtons.length).toBeGreaterThan(0);
 
     // Switch to want tab — Year sort should disappear from controls
-    userEvent.click(screen.getByText("Want to Read"));
+    await user.click(screen.getByText("Want to Read"));
     // The table header "Year" should also be gone on want tab
     // Only rating sort should remain in the controls
     const yearAfter = screen.queryAllByText("Year");
     expect(yearAfter.length).toBe(0);
   });
 
-  it("toggles rating sort: desc → asc → none", () => {
+  it("toggles rating sort: desc → asc → none", async () => {
     // Use the sort controls button (not the table header)
     const sortControls = screen.getByText("Sort by:").parentElement;
     const ratingBtn = within(sortControls).getByText("Rating");
 
     // First click → rating-desc
-    userEvent.click(ratingBtn);
+    await user.click(ratingBtn);
     // Second click → rating-asc
-    userEvent.click(ratingBtn);
+    await user.click(ratingBtn);
     // Third click → none (back to default)
-    userEvent.click(ratingBtn);
+    await user.click(ratingBtn);
 
     // After 3 clicks we should be back at the original count with no errors
     expect(
@@ -121,12 +124,13 @@ describe("Books component", () => {
 });
 
 describe("Books sorting correctness", () => {
-  it("sorts books by rating descending", () => {
+  it("sorts books by rating descending", async () => {
+    const user = userEvent.setup();
     renderWithProviders(<Books />);
 
     const sortControls = screen.getByText("Sort by:").parentElement;
     const ratingBtn = within(sortControls).getByText("Rating");
-    userEvent.click(ratingBtn); // desc
+    await user.click(ratingBtn); // desc
 
     // Get all rating cells from the desktop table
     const ratingCells = screen
@@ -141,13 +145,14 @@ describe("Books sorting correctness", () => {
     }
   });
 
-  it("sorts books by rating ascending on second click", () => {
+  it("sorts books by rating ascending on second click", async () => {
+    const user = userEvent.setup();
     renderWithProviders(<Books />);
 
     const sortControls = screen.getByText("Sort by:").parentElement;
     const ratingBtn = within(sortControls).getByText("Rating");
-    userEvent.click(ratingBtn); // desc
-    userEvent.click(ratingBtn); // asc
+    await user.click(ratingBtn); // desc
+    await user.click(ratingBtn); // asc
 
     const ratingCells = screen
       .getAllByText(/^([1-9]|10)$/)
