@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { media } from "../../styles/theme";
 import { Container, SectionTitle } from "../../styles/shared";
-import matt from "../../assets/Matt.png";
+import matt from "../../assets/Matt.jpg";
 
 const AboutWrapper = styled.section`
   padding: ${({ theme }) => theme.spacing[12]} 0;
@@ -148,7 +148,7 @@ export default function MattsSection() {
         <AboutLayout>
           <PhotoColumn>
             <PhotoFrame>
-              <Photo src={matt} alt="Matt Bokovitz" />
+              <Photo src={matt} alt="Matt Bokovitz" width={520} height={520} loading="eager" fetchPriority="high" />
             </PhotoFrame>
           </PhotoColumn>
 

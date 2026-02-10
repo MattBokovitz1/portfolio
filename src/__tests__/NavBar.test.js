@@ -10,7 +10,10 @@ import NavBar from "../components/NavBar";
  */
 
 describe("NavBar", () => {
+  let user;
+
   beforeEach(() => {
+    user = userEvent.setup();
     renderWithProviders(<NavBar />);
   });
 
@@ -39,9 +42,9 @@ describe("NavBar", () => {
     expect(emailLinks.length).toBeGreaterThan(0);
   });
 
-  it("opens mobile menu on hamburger click", () => {
+  it("opens mobile menu on hamburger click", async () => {
     const menuButton = screen.getByLabelText("Open navigation menu");
-    userEvent.click(menuButton);
+    await user.click(menuButton);
 
     // Mobile menu should now have the close button visible
     expect(
@@ -55,7 +58,7 @@ describe("NavBar", () => {
 
   it("closes mobile menu on close button click", async () => {
     const menuButton = screen.getByLabelText("Open navigation menu");
-    userEvent.click(menuButton);
+    await user.click(menuButton);
 
     // Wait for body overflow to be set to hidden
     await waitFor(() => {
@@ -63,7 +66,7 @@ describe("NavBar", () => {
     });
 
     const closeButton = screen.getByLabelText("Close navigation menu");
-    userEvent.click(closeButton);
+    await user.click(closeButton);
 
     // After closing, body overflow should be restored
     await waitFor(() => {
