@@ -1,18 +1,14 @@
 import React from "react";
-import {
-  AboutSection
-} from "../../styles/StyledComponents";
-
-import HomeDisplay from "./HomeDisplay";
-import MattsSection from "../home/MattsSection";
+import HeroDisplay from "./HomeDisplay";
+import MattsSection from "./MattsSection";
+import Projects from "./Projects";
 
 function Home() {
   return (
     <>
-      <HomeDisplay />
-      <AboutSection id="aboutsection">
-        <MattsSection />
-      </AboutSection>
+      <HeroDisplay />
+      <MattsSection />
+      <Projects />
     </>
   );
 }

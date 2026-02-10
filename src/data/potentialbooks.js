@@ -128,7 +128,7 @@ const potentialBooks = [
     topic: "Mathematics",
   },
   {
-    id: 17,
+    id: 25,
     title: "Macroeconomics",
     author: "Gregory Mankiw",
     date: "2023",
@@ -136,7 +136,7 @@ const potentialBooks = [
     topic: "Science",
   },
   {
-    id: 18,
+    id: 26,
     title: "Seminar on Nietzsche's Zarathustra",
     author: "Carl Jung",
     date: "2023",
@@ -144,7 +144,7 @@ const potentialBooks = [
     topic: "Philosophy",
   },
   {
-    id: 19,
+    id: 27,
     title: "Revolutionary Writings 1755-1775",
     author: "John Adams",
     date: "2023",
