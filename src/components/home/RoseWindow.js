@@ -4,13 +4,19 @@ import styled, { keyframes } from "styled-components";
 /*
  * Rose Stained-Glass Window Mandala
  * ─────────────────────────────────
- * 8 petals representing top literary interests, inspired by the great
- * rose windows of Chartres and Notre-Dame. Each petal corresponds to a
- * book topic: Psychology, Philosophy, Classics, History, Religion,
- * Science, Politics, and Mathematics.
+ * A contemplative mandala inspired by the great rose windows of
+ * Chartres, Notre-Dame, and the Basilica of the Sacred Heart.
  *
- * The colour palette merges cathedral stained-glass hues (cobalt, ruby,
- * amber, emerald) with our existing navy / gold design tokens.
+ * The animation evokes the majesty of Christ — concentric layers
+ * of light turning at different speeds like celestial spheres,
+ * recalling the medieval concept of the Primum Mobile and Dante's
+ * vision of the Empyrean. The outer ring of 24 tracery dots moves
+ * at the pace of the stars; the petals breathe with a slow divine
+ * pulse; the inner medallion radiates a quiet, eternal stillness
+ * broken only by a soft corona of gold light.
+ *
+ * 8 petals representing literary disciplines, each with its own
+ * stained-glass hue drawn from cathedral colour tradition.
  */
 
 const PETALS = [
@@ -24,10 +30,40 @@ const PETALS = [
   { topic: "Mathematics", color: "#c4545a", colorDark: "#983e42" },
 ];
 
-const slowSpin = keyframes`
+/* ── Celestial rotation animations ─────────────────────────────── */
+
+/* Outermost layer — the firmament, slow and stately */
+const spinFirmament = keyframes`
   from { transform: rotate(0deg); }
   to   { transform: rotate(360deg); }
 `;
+
+/* Petals — counter-rotation, slower still, like the wheel of Ezekiel */
+const spinPetals = keyframes`
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(-360deg); }
+`;
+
+/* Inner trefoils — forward again, faster, wheels within wheels */
+const spinTrefoils = keyframes`
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+`;
+
+/* The divine corona — a gentle, breathing pulse of golden light */
+const pulseGlory = keyframes`
+  0%, 100% { opacity: 0.12; r: 50; }
+  50%      { opacity: 0.28; r: 62; }
+`;
+
+/* A soft radiance shimmering across the glass */
+const shimmerLight = keyframes`
+  0%   { opacity: 0.06; transform: rotate(0deg); }
+  50%  { opacity: 0.16; transform: rotate(180deg); }
+  100% { opacity: 0.06; transform: rotate(360deg); }
+`;
+
+/* ── Styled wrappers ───────────────────────────────────────────── */
 
 const Wrapper = styled.div`
   position: relative;
@@ -42,15 +78,34 @@ const SVG = styled.svg`
   filter: drop-shadow(0 8px 32px rgba(26, 26, 62, 0.25));
 `;
 
-const GlowRing = styled.circle`
-  animation: ${slowSpin} 120s linear infinite;
-  transform-origin: center;
+/* Rotating layers — each wraps a group of SVG elements */
+const FirmamentLayer = styled.g`
+  animation: ${spinFirmament} 180s linear infinite;
+  transform-origin: 200px 200px;
 `;
 
-/**
- * Compute the SVG path for one petal of the rose window.
- * Each petal is an elongated leaf shape (two cubic curves).
- */
+const PetalLayer = styled.g`
+  animation: ${spinPetals} 240s linear infinite;
+  transform-origin: 200px 200px;
+`;
+
+const TrefoilLayer = styled.g`
+  animation: ${spinTrefoils} 160s linear infinite;
+  transform-origin: 200px 200px;
+`;
+
+const GloryCorona = styled.circle`
+  animation: ${pulseGlory} 8s ease-in-out infinite;
+  transform-origin: 200px 200px;
+`;
+
+const ShimmerOverlay = styled.g`
+  animation: ${shimmerLight} 20s ease-in-out infinite;
+  transform-origin: 200px 200px;
+`;
+
+/* ── Geometry helpers ──────────────────────────────────────────── */
+
 function petalPath(cx, cy, angleDeg, innerR, outerR, spread) {
   const a = (angleDeg * Math.PI) / 180;
   const tipX = cx + Math.cos(a) * outerR;
@@ -81,12 +136,11 @@ function petalPath(cx, cy, angleDeg, innerR, outerR, spread) {
           Z`;
 }
 
-/**
- * Build a smaller "inner petal" for the lighter glass highlight.
- */
 function innerPetalPath(cx, cy, angleDeg, innerR, outerR, spread) {
   return petalPath(cx, cy, angleDeg, innerR * 1.15, outerR * 0.72, spread * 0.7);
 }
+
+/* ── Component ─────────────────────────────────────────────────── */
 
 export default function RoseWindow({ size = 400 }) {
   const cx = 200;
@@ -111,14 +165,22 @@ export default function RoseWindow({ size = 400 }) {
             <stop offset="100%" stopColor="#0f0f2a" />
           </radialGradient>
 
-          {/* Centre medallion gradient */}
+          {/* Centre medallion gradient — Christ in Majesty */}
           <radialGradient id="rw-center">
-            <stop offset="0%" stopColor="#dac278" />
-            <stop offset="60%" stopColor="#c5a044" />
+            <stop offset="0%" stopColor="#f0e1a8" />
+            <stop offset="40%" stopColor="#dac278" />
+            <stop offset="75%" stopColor="#c5a044" />
             <stop offset="100%" stopColor="#a07e2c" />
           </radialGradient>
 
-          {/* Petal gradients — each petal gets its own custom gradient */}
+          {/* Divine corona — radiant glory emanating from center */}
+          <radialGradient id="rw-corona" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor="#f5e6b8" stopOpacity="0.5" />
+            <stop offset="40%" stopColor="#c5a044" stopOpacity="0.2" />
+            <stop offset="100%" stopColor="#c5a044" stopOpacity="0" />
+          </radialGradient>
+
+          {/* Petal gradients */}
           {PETALS.map((p, i) => (
             <radialGradient key={`pg-${i}`} id={`rw-petal-${i}`}
               cx="50%" cy="50%" r="60%">
@@ -133,92 +195,123 @@ export default function RoseWindow({ size = 400 }) {
             <stop offset="100%" stopColor="#fff" stopOpacity="0" />
           </radialGradient>
 
-          {/* Lead line (tracery) stroke pattern */}
-          <filter id="rw-leadglow">
-            <feGaussianBlur stdDeviation="0.5" />
-          </filter>
+          {/* Shimmer sweep — a beam of light passing across the glass */}
+          <linearGradient id="rw-shimmer" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#fff" stopOpacity="0" />
+            <stop offset="40%" stopColor="#fff" stopOpacity="0.08" />
+            <stop offset="50%" stopColor="#f5e6b8" stopOpacity="0.15" />
+            <stop offset="60%" stopColor="#fff" stopOpacity="0.08" />
+            <stop offset="100%" stopColor="#fff" stopOpacity="0" />
+          </linearGradient>
         </defs>
 
         {/* ── Background circle ── */}
         <circle cx={cx} cy={cy} r="195" fill="url(#rw-bg)" />
 
-        {/* ── Outer ring — gold tracery border ── */}
-        <circle cx={cx} cy={cy} r="185" fill="none"
-          stroke="url(#rw-border-grad)" strokeWidth="4" />
-        <circle cx={cx} cy={cy} r="176" fill="none"
-          stroke="#c5a044" strokeWidth="1" opacity="0.4" />
+        {/* ── Firmament layer — outer ornamental ring, rotating like the stars ── */}
+        <FirmamentLayer>
+          {/* Outer ring — gold tracery border */}
+          <circle cx={cx} cy={cy} r="185" fill="none"
+            stroke="url(#rw-border-grad)" strokeWidth="4" />
+          <circle cx={cx} cy={cy} r="176" fill="none"
+            stroke="#c5a044" strokeWidth="1" opacity="0.4" />
 
-        {/* ── Secondary ornamental ring of small circles ── */}
-        {Array.from({ length: 24 }).map((_, i) => {
-          const angle = (i * 15) * Math.PI / 180;
-          const r = 172;
-          return (
-            <circle key={`dot-${i}`}
-              cx={cx + Math.cos(angle) * r}
-              cy={cy + Math.sin(angle) * r}
-              r="2.5"
-              fill="#c5a044"
-              opacity="0.5"
-            />
-          );
-        })}
+          {/* 24 ornamental dots — the fixed stars */}
+          {Array.from({ length: 24 }).map((_, i) => {
+            const angle = (i * 15) * Math.PI / 180;
+            const r = 172;
+            return (
+              <circle key={`dot-${i}`}
+                cx={cx + Math.cos(angle) * r}
+                cy={cy + Math.sin(angle) * r}
+                r="2.5"
+                fill="#c5a044"
+                opacity="0.5"
+              />
+            );
+          })}
 
-        {/* ── Main petals ── */}
-        {PETALS.map((p, i) => {
-          const angle = i * 45 - 90; // start from top
-          return (
-            <g key={`petal-${i}`}>
-              {/* Dark petal (main shape) */}
-              <path
-                d={petalPath(cx, cy, angle, innerR, outerR, spread)}
-                fill={`url(#rw-petal-${i})`}
+          {/* Outer trefoil decorations */}
+          {Array.from({ length: 8 }).map((_, i) => {
+            const angle = (i * 45 - 90) * Math.PI / 180;
+            const r = 168;
+            return (
+              <circle key={`trefoil-${i}`}
+                cx={cx + Math.cos(angle) * r}
+                cy={cy + Math.sin(angle) * r}
+                r="6"
+                fill={PETALS[i].colorDark}
+                stroke="#c5a044"
+                strokeWidth="1"
+                opacity="0.7"
+              />
+            );
+          })}
+
+          {/* Radial lead lines */}
+          {Array.from({ length: 8 }).map((_, i) => {
+            const angle = (i * 45 - 90) * Math.PI / 180;
+            return (
+              <line key={`lead-${i}`}
+                x1={cx + Math.cos(angle) * innerR}
+                y1={cy + Math.sin(angle) * innerR}
+                x2={cx + Math.cos(angle) * 175}
+                y2={cy + Math.sin(angle) * 175}
                 stroke="#c5a044"
                 strokeWidth="1.5"
-                opacity="0.9"
+                opacity="0.3"
               />
-              {/* Inner lighter glass area */}
-              <path
-                d={innerPetalPath(cx, cy, angle, innerR, outerR, spread)}
-                fill={p.color}
-                opacity="0.45"
+            );
+          })}
+        </FirmamentLayer>
+
+        {/* ── Petal layer — the eight virtues, counter-rotating ── */}
+        <PetalLayer>
+          {PETALS.map((p, i) => {
+            const angle = i * 45 - 90;
+            return (
+              <g key={`petal-${i}`}>
+                <path
+                  d={petalPath(cx, cy, angle, innerR, outerR, spread)}
+                  fill={`url(#rw-petal-${i})`}
+                  stroke="#c5a044"
+                  strokeWidth="1.5"
+                  opacity="0.9"
+                />
+                <path
+                  d={innerPetalPath(cx, cy, angle, innerR, outerR, spread)}
+                  fill={p.color}
+                  opacity="0.45"
+                  stroke="#c5a044"
+                  strokeWidth="0.75"
+                />
+              </g>
+            );
+          })}
+        </PetalLayer>
+
+        {/* ── Trefoil layer — small inter-petals, wheels within wheels ── */}
+        <TrefoilLayer>
+          {PETALS.map((_, i) => {
+            const angle = i * 45 - 90 + 22.5;
+            return (
+              <path key={`sm-${i}`}
+                d={petalPath(cx, cy, angle, innerR * 0.9, outerR * 0.52, spread * 0.75)}
+                fill={PETALS[(i + 1) % 8].colorDark}
                 stroke="#c5a044"
-                strokeWidth="0.75"
+                strokeWidth="1"
+                opacity="0.6"
               />
-            </g>
-          );
-        })}
+            );
+          })}
+        </TrefoilLayer>
 
-        {/* ── Small petals between main petals (trefoils) ── */}
-        {PETALS.map((_, i) => {
-          const angle = i * 45 - 90 + 22.5;
-          return (
-            <path key={`sm-${i}`}
-              d={petalPath(cx, cy, angle, innerR * 0.9, outerR * 0.52, spread * 0.75)}
-              fill={PETALS[(i + 1) % 8].colorDark}
-              stroke="#c5a044"
-              strokeWidth="1"
-              opacity="0.6"
-            />
-          );
-        })}
+        {/* ── Divine corona — radiant glory from the centre ── */}
+        <GloryCorona cx={cx} cy={cy} r="50"
+          fill="url(#rw-corona)"
+        />
 
-        {/* ── Radial "lead" lines from center through each petal ── */}
-        {Array.from({ length: 8 }).map((_, i) => {
-          const angle = (i * 45 - 90) * Math.PI / 180;
-          return (
-            <line key={`lead-${i}`}
-              x1={cx + Math.cos(angle) * innerR}
-              y1={cy + Math.sin(angle) * innerR}
-              x2={cx + Math.cos(angle) * 175}
-              y2={cy + Math.sin(angle) * 175}
-              stroke="#c5a044"
-              strokeWidth="1.5"
-              opacity="0.3"
-            />
-          );
-        })}
-
-        {/* ── Centre medallion ── */}
+        {/* ── Centre medallion — the still point of the turning world ── */}
         <circle cx={cx} cy={cy} r={innerR + 2}
           fill="url(#rw-center)"
           stroke="#a07e2c"
@@ -231,44 +324,28 @@ export default function RoseWindow({ size = 400 }) {
           opacity="0.25"
         />
 
-        {/* Cross / compass in center */}
+        {/* Chi-Rho inspired cross at center */}
         <line x1={cx} y1={cy - 22} x2={cx} y2={cy + 22}
           stroke="#1a1a3e" strokeWidth="2" opacity="0.3" />
         <line x1={cx - 22} y1={cy} x2={cx + 22} y2={cy}
           stroke="#1a1a3e" strokeWidth="2" opacity="0.3" />
+        {/* Small diagonal strokes suggesting the Chi */}
+        <line x1={cx - 12} y1={cy - 16} x2={cx + 12} y2={cy + 16}
+          stroke="#1a1a3e" strokeWidth="1" opacity="0.15" />
+        <line x1={cx + 12} y1={cy - 16} x2={cx - 12} y2={cy + 16}
+          stroke="#1a1a3e" strokeWidth="1" opacity="0.15" />
 
-        {/* Centre dot */}
+        {/* Centre jewel */}
         <circle cx={cx} cy={cy} r="5" fill="#1a1a3e" opacity="0.35" />
-        <circle cx={cx} cy={cy} r="2.5" fill="#dac278" />
+        <circle cx={cx} cy={cy} r="2.5" fill="#f0e1a8" />
 
-        {/* ── Outer trefoil decorations ── */}
-        {Array.from({ length: 8 }).map((_, i) => {
-          const angle = (i * 45 - 90) * Math.PI / 180;
-          const r = 168;
-          return (
-            <circle key={`trefoil-${i}`}
-              cx={cx + Math.cos(angle) * r}
-              cy={cy + Math.sin(angle) * r}
-              r="6"
-              fill={PETALS[i].colorDark}
-              stroke="#c5a044"
-              strokeWidth="1"
-              opacity="0.7"
-            />
-          );
-        })}
-
-        {/* ── Glass sheen overlay ── */}
+        {/* ── Glass sheen ── */}
         <circle cx={cx} cy={cy} r="185" fill="url(#rw-sheen)" />
 
-        {/* Subtle animated glow ring */}
-        <GlowRing cx={cx} cy={cy} r="182"
-          fill="none"
-          stroke="#c5a044"
-          strokeWidth="0.5"
-          opacity="0.2"
-          strokeDasharray="8 16"
-        />
+        {/* ── Shimmer — light passing across the window like sun through glass ── */}
+        <ShimmerOverlay>
+          <circle cx={cx} cy={cy} r="185" fill="url(#rw-shimmer)" />
+        </ShimmerOverlay>
       </SVG>
     </Wrapper>
   );
