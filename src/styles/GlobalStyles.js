@@ -20,6 +20,23 @@ const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.colors.text};
     background: ${({ theme }) => theme.colors.background};
     line-height: ${({ theme }) => theme.lineHeights.normal};
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Cathedral-themed scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: ${({ theme }) => theme.colors.ivory};
+  }
+  ::-webkit-scrollbar-thumb {
+    background: ${({ theme }) => theme.colors.stone300};
+    border-radius: 4px;
+    border: 2px solid ${({ theme }) => theme.colors.ivory};
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: ${({ theme }) => theme.colors.gold};
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -89,6 +106,18 @@ const GlobalStyles = createGlobalStyle`
       flex: 1;
       height: 1px;
       background: ${({ theme }) => theme.colors.stone200};
+    }
+  }
+
+  /* Smooth reveal for sections entering viewport */
+  @keyframes gentleRise {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 `;

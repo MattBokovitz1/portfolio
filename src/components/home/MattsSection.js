@@ -1,8 +1,17 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { media } from "../../styles/theme";
 import { Container, SectionTitle } from "../../styles/shared";
 import matt from "../../assets/Matt.jpg";
+
+/* ────────────────── Animations ────────────────── */
+
+const shimmer = keyframes`
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+`;
+
+/* ────────────────── Section / Layout ────────────────── */
 
 const AboutWrapper = styled.section`
   padding: ${({ theme }) => theme.spacing[12]} 0;
@@ -11,6 +20,21 @@ const AboutWrapper = styled.section`
 
   ${media.md} {
     padding: ${({ theme }) => theme.spacing[20]} 0;
+  }
+
+  /* Subtle stone texture overlay */
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 120px,
+      rgba(26, 26, 62, 0.015) 120px,
+      rgba(26, 26, 62, 0.015) 121px
+    );
+    pointer-events: none;
   }
 `;
 
@@ -31,6 +55,8 @@ const AboutLayout = styled.div`
   }
 `;
 
+/* ────────────────── Photo with Gothic Arch Frame ────────────────── */
+
 const PhotoColumn = styled.div`
   flex-shrink: 0;
   display: flex;
@@ -45,7 +71,11 @@ const PhotoFrame = styled.div`
   border-radius: ${({ theme }) => theme.radii['2xl']};
   overflow: hidden;
   border: 3px solid ${({ theme }) => theme.colors.gold};
-  box-shadow: 0 12px 32px rgba(26, 26, 62, 0.10);
+  box-shadow:
+    0 12px 32px rgba(26, 26, 62, 0.10),
+    0 0 0 6px rgba(197, 160, 68, 0.06),
+    0 0 60px rgba(197, 160, 68, 0.08);
+  position: relative;
 
   ${media.md} {
     width: 220px;
@@ -56,6 +86,24 @@ const PhotoFrame = styled.div`
     width: 260px;
     height: 260px;
   }
+
+  /* Shimmer highlight across frame */
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      105deg,
+      transparent 40%,
+      rgba(197, 160, 68, 0.08) 45%,
+      rgba(197, 160, 68, 0.12) 50%,
+      rgba(197, 160, 68, 0.08) 55%,
+      transparent 60%
+    );
+    background-size: 200% 100%;
+    animation: ${shimmer} 8s ease-in-out infinite;
+    pointer-events: none;
+  }
 `;
 
 const Photo = styled.img`
@@ -63,6 +111,8 @@ const Photo = styled.img`
   height: 100%;
   object-fit: cover;
 `;
+
+/* ────────────────── Text Column ────────────────── */
 
 const TextColumn = styled.div`
   flex: 1;
@@ -93,6 +143,41 @@ const Highlight = styled.span`
   color: ${({ theme }) => theme.colors.navy};
   font-weight: ${({ theme }) => theme.fontWeights.semibold};
 `;
+
+/* ────────────────── Ornamental Rule ────────────────── */
+
+const OrnamentalRule = styled.div`
+  width: 100%;
+  max-width: 220px;
+  height: 1px;
+  margin: 0 auto ${({ theme }) => theme.spacing[6]};
+  background: linear-gradient(
+    90deg,
+    transparent,
+    ${({ theme }) => theme.colors.gold}40,
+    transparent
+  );
+  position: relative;
+
+  ${media.md} {
+    margin: 0 0 ${({ theme }) => theme.spacing[6]};
+  }
+
+  &::after {
+    content: '✦';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.55rem;
+    color: ${({ theme }) => theme.colors.gold};
+    background: ${({ theme }) => theme.colors.cream};
+    padding: 0 0.5rem;
+    opacity: 0.6;
+  }
+`;
+
+/* ────────────────── Tech Stack ────────────────── */
 
 const TechTitle = styled.h3`
   font-family: ${({ theme }) => theme.fonts.mono};
@@ -128,6 +213,7 @@ const TechTag = styled.span`
   &:hover {
     border-color: ${({ theme }) => theme.colors.gold};
     color: ${({ theme }) => theme.colors.navy};
+    box-shadow: 0 2px 12px rgba(197, 160, 68, 0.12);
   }
 `;
 
@@ -164,6 +250,7 @@ export default function MattsSection() {
               This site is also my space to share writing about the great ideas
               that shape how I see the world.
             </AboutText>
+            <OrnamentalRule />
             <TechTitle>Tech I work with</TechTitle>
             <TechStack>
               {techStack.map((tech) => (

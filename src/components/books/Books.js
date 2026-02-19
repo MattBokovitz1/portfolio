@@ -11,9 +11,25 @@ const BooksWrapper = styled.section`
   padding: ${({ theme }) => theme.spacing[12]} 0;
   background: ${({ theme }) => theme.colors.cream};
   min-height: 60vh;
+  position: relative;
 
   ${media.md} {
     padding: ${({ theme }) => theme.spacing[20]} 0;
+  }
+
+  /* Subtle parchment texture */
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 80px,
+      rgba(26, 26, 62, 0.012) 80px,
+      rgba(26, 26, 62, 0.012) 81px
+    );
+    pointer-events: none;
   }
 `;
 
@@ -43,6 +59,10 @@ const TabButton = styled.button`
   &:hover {
     color: ${({ theme }) => theme.colors.navy};
   }
+
+  ${({ $active }) => $active && `
+    text-shadow: 0 0 20px rgba(197, 160, 68, 0.15);
+  `}
 
   ${media.md} {
     font-size: ${({ theme }) => theme.fontSizes.lg};
@@ -136,6 +156,7 @@ const TableWrapper = styled.div`
   overflow-x: auto;
   border: 1px solid ${({ theme }) => theme.colors.stone200};
   border-radius: ${({ theme }) => theme.radii.xl};
+  box-shadow: 0 4px 16px rgba(26, 26, 62, 0.04);
 `;
 
 const StyledTable = styled.table`
@@ -200,10 +221,11 @@ const Td = styled.td`
 `;
 
 const TableRow = styled.tr`
-  transition: background ${({ theme }) => theme.transitions.fast};
+  transition: all ${({ theme }) => theme.transitions.fast};
 
   &:hover {
     background: ${({ theme }) => theme.colors.goldSubtle};
+    box-shadow: inset 3px 0 0 ${({ theme }) => theme.colors.gold};
   }
 
   &:last-child ${Td} {
@@ -228,14 +250,16 @@ const Rating = styled.span`
     if (num >= 7) return theme.colors.gold;
     return theme.colors.stone400;
   }};
-  color: ${({ theme, $value }) => {
-    const num = parseInt($value);
-    if (num >= 7) return theme.colors.cream;
-    return theme.colors.cream;
-  }};
+  color: ${({ theme }) => theme.colors.cream};
   font-size: ${({ theme }) => theme.fontSizes.xs};
   font-weight: ${({ theme }) => theme.fontWeights.semibold};
   border-radius: ${({ theme }) => theme.radii.md};
+  box-shadow: ${({ $value }) => {
+    const num = parseInt($value);
+    if (num >= 9) return '0 2px 8px rgba(26, 26, 62, 0.25)';
+    if (num >= 7) return '0 2px 8px rgba(197, 160, 68, 0.25)';
+    return 'none';
+  }};
 `;
 
 const TopicBadge = styled.span`
@@ -293,6 +317,7 @@ const MobileCardList = styled.div`
   border-radius: ${({ theme }) => theme.radii.xl};
   overflow: hidden;
   background: ${({ theme }) => theme.colors.ivory};
+  box-shadow: 0 4px 16px rgba(26, 26, 62, 0.04);
 `;
 
 export default function Books() {
