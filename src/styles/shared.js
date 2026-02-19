@@ -30,22 +30,24 @@ export const Section = styled.section`
   }
 `;
 
-// Section title
+// Section title — cathedral heading with ornamental cross-fleurie
 export const SectionTitle = styled.h2`
   font-family: ${({ theme }) => theme.fonts.heading};
   font-weight: ${({ theme }) => theme.fontWeights.semibold};
   color: ${({ theme }) => theme.colors.navy};
   margin-bottom: ${({ theme }) => theme.spacing[8]};
   position: relative;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.02em;
+  text-align: center;
 
   &::after {
-    content: '\u2726';
+    content: '✦  ·  ✦';
     display: block;
     color: ${({ theme }) => theme.colors.gold};
-    font-size: ${({ theme }) => theme.fontSizes.lg};
+    font-size: ${({ theme }) => theme.fontSizes.sm};
     margin-top: ${({ theme }) => theme.spacing[3]};
-    letter-spacing: 0.3em;
+    letter-spacing: 0.25em;
+    opacity: 0.7;
   }
 
   ${media.md} {
@@ -60,11 +62,12 @@ export const Card = styled.div`
   border-radius: ${({ theme }) => theme.radii.lg};
   padding: ${({ theme }) => theme.spacing[6]};
   transition: all ${({ theme }) => theme.transitions.normal};
+  position: relative;
 
   &:hover {
-    box-shadow: ${({ theme }) => theme.shadows.lg};
+    box-shadow: 0 12px 28px rgba(26, 26, 62, 0.08), 0 0 0 1px ${({ theme }) => theme.colors.gold}30;
     border-color: ${({ theme }) => theme.colors.gold};
-    transform: translateY(-2px);
+    transform: translateY(-3px);
   }
 
   ${media.md} {

@@ -18,11 +18,13 @@ const FooterWrapper = styled.footer`
     top: 0;
     left: 0;
     right: 0;
-    height: 1px;
+    height: 2px;
     background: linear-gradient(
       90deg,
       transparent 0%,
+      rgba(197, 160, 68, 0.08) 15%,
       ${({ theme }) => theme.colors.gold}40 50%,
+      rgba(197, 160, 68, 0.08) 85%,
       transparent 100%
     );
   }
@@ -32,7 +34,34 @@ const FooterContainer = styled(Container)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: ${({ theme }) => theme.spacing[6]};
+  gap: ${({ theme }) => theme.spacing[4]};
+
+  ${media.md} {
+    gap: ${({ theme }) => theme.spacing[6]};
+  }
+`;
+
+const Valediction = styled.p`
+  font-family: ${({ theme }) => theme.fonts.heading};
+  font-size: ${({ theme }) => theme.fontSizes.sm};
+  color: ${({ theme }) => theme.colors.gold};
+  opacity: 0.45;
+  letter-spacing: 0.15em;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: ${({ theme }) => theme.spacing[2]};
+
+  ${media.md} {
+    font-size: ${({ theme }) => theme.fontSizes.base};
+  }
+`;
+
+const FooterRow = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: ${({ theme }) => theme.spacing[4]};
+  width: 100%;
 
   ${media.md} {
     flex-direction: row;
@@ -63,6 +92,7 @@ const FooterLink = styled.a`
   width: 2.25rem;
   height: 2.25rem;
   color: ${({ theme }) => theme.colors.stone500};
+  border: 1px solid rgba(197, 160, 68, 0.1);
   border-radius: ${({ theme }) => theme.radii.md};
   font-size: 1rem;
   transition: all ${({ theme }) => theme.transitions.fast};
@@ -70,7 +100,9 @@ const FooterLink = styled.a`
 
   &:hover {
     color: ${({ theme }) => theme.colors.gold};
+    border-color: ${({ theme }) => theme.colors.gold};
     background: rgba(197, 160, 68, 0.1);
+    box-shadow: 0 0 16px rgba(197, 160, 68, 0.12);
   }
 `;
 
@@ -78,33 +110,36 @@ function Footer() {
   return (
     <FooterWrapper>
       <FooterContainer>
-        <FooterText>
-          &copy; {new Date().getFullYear()} Matt Bokovitz. Built with React.
-        </FooterText>
-        <FooterLinks>
-          <FooterLink
-            href="https://github.com/MattBokovitz1"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub"
-          >
-            <FontAwesomeIcon icon={faGithub} />
-          </FooterLink>
-          <FooterLink
-            href="https://twitter.com/matt_bokovitz"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="X (Twitter)"
-          >
-            <FontAwesomeIcon icon={faSquareXTwitter} />
-          </FooterLink>
-          <FooterLink
-            href="mailto:matt.bokovitz1@gmail.com?subject=re: Portfolio"
-            aria-label="Email"
-          >
-            <FontAwesomeIcon icon={faEnvelope} />
-          </FooterLink>
-        </FooterLinks>
+        <Valediction>Ad Majorem Dei Gloriam</Valediction>
+        <FooterRow>
+          <FooterText>
+            &copy; {new Date().getFullYear()} Matt Bokovitz. Built with React.
+          </FooterText>
+          <FooterLinks>
+            <FooterLink
+              href="https://github.com/MattBokovitz1"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <FontAwesomeIcon icon={faGithub} />
+            </FooterLink>
+            <FooterLink
+              href="https://twitter.com/matt_bokovitz"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="X (Twitter)"
+            >
+              <FontAwesomeIcon icon={faSquareXTwitter} />
+            </FooterLink>
+            <FooterLink
+              href="mailto:matt.bokovitz1@gmail.com?subject=re: Portfolio"
+              aria-label="Email"
+            >
+              <FontAwesomeIcon icon={faEnvelope} />
+            </FooterLink>
+          </FooterLinks>
+        </FooterRow>
       </FooterContainer>
     </FooterWrapper>
   );

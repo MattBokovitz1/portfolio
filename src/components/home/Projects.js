@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { media } from "../../styles/theme";
 import { Container, SectionTitle, Card, ButtonPrimary, ButtonOutline } from "../../styles/shared";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -7,25 +7,55 @@ import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import projectsData from "../../data/projects";
 
+/* ────────────────── Animations ────────────────── */
+
+const softPulse = keyframes`
+  0%, 100% { opacity: 0.04; }
+  50% { opacity: 0.08; }
+`;
+
+/* ────────────────── Section ────────────────── */
+
 const ProjectsWrapper = styled.section`
   padding: ${({ theme }) => theme.spacing[12]} 0;
   background: ${({ theme }) => theme.colors.navy};
   position: relative;
+  overflow: hidden;
 
-  /* Gold rule top */
+  /* Gold rule top — heavenly threshold */
   &::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    height: 1px;
+    height: 2px;
     background: linear-gradient(
       90deg,
       transparent 0%,
-      rgba(197, 160, 68, 0.2) 50%,
+      rgba(197, 160, 68, 0.08) 15%,
+      rgba(197, 160, 68, 0.3) 50%,
+      rgba(197, 160, 68, 0.08) 85%,
       transparent 100%
     );
+  }
+
+  /* Ambient celestial glow */
+  &::after {
+    content: '';
+    position: absolute;
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 600px;
+    background: radial-gradient(
+      ellipse at center,
+      rgba(197, 160, 68, 0.04) 0%,
+      transparent 60%
+    );
+    animation: ${softPulse} 12s ease-in-out infinite;
+    pointer-events: none;
   }
 
   ${media.md} {
@@ -35,6 +65,8 @@ const ProjectsWrapper = styled.section`
 
 const DarkSectionTitle = styled(SectionTitle)`
   color: ${({ theme }) => theme.colors.cream};
+  position: relative;
+  z-index: 1;
 
   &::after {
     color: ${({ theme }) => theme.colors.gold};
@@ -44,6 +76,8 @@ const DarkSectionTitle = styled(SectionTitle)`
 const ProjectsGrid = styled.div`
   display: grid;
   gap: ${({ theme }) => theme.spacing[6]};
+  position: relative;
+  z-index: 1;
 
   ${media.md} {
     grid-template-columns: repeat(2, 1fr);
@@ -59,7 +93,9 @@ const ProjectCard = styled(Card)`
 
   &:hover {
     border-color: ${({ theme }) => theme.colors.gold};
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    box-shadow:
+      0 8px 24px rgba(0, 0, 0, 0.2),
+      0 0 40px rgba(197, 160, 68, 0.08);
   }
 `;
 
