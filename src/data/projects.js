@@ -12,8 +12,8 @@ const projects = [
     title: "Fitness Club",
     description:
       "React Web application for fitness coach to use to market classes and for athletes to find out about upcoming fitness events in their area. Users can register as admins or clients and then sign in. Admins can create, edit, and delete workout classes, and clients can view the classes. Front end deployed to vercel and node backend to heroku.",
-    project_link: "https://fitness-club.vercel.app/",
-    github_link: "https://github.com/MattBokovitz1/FitnessClub",
+    project_link: "https://nfl-statistics.vercel.app/",
+    github_link: "https://github.com/MattBokovitz1/SecretProject",
   },
   // {
   //   id: 3,
