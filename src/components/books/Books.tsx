@@ -40,7 +40,7 @@ const TabNav = styled.div`
   border-bottom: 1px solid ${({ theme }) => theme.colors.stone200};
 `;
 
-const TabButton = styled.button`
+const TabButton = styled.button<{ $active: boolean }>`
   padding: ${({ theme }) => `${theme.spacing[3]} ${theme.spacing[5]}`};
   font-family: ${({ theme }) => theme.fonts.heading};
   font-size: ${({ theme }) => theme.fontSizes.sm};
@@ -77,7 +77,7 @@ const FilterBar = styled.div`
   margin-bottom: ${({ theme }) => theme.spacing[6]};
 `;
 
-const FilterChip = styled.button`
+const FilterChip = styled.button<{ $active: boolean }>`
   padding: ${({ theme }) => `${theme.spacing[1]} ${theme.spacing[3]}`};
   font-size: ${({ theme }) => theme.fontSizes.xs};
   font-weight: ${({ theme }) => theme.fontWeights.medium};
@@ -123,7 +123,7 @@ const SortLabel = styled.span`
   font-family: ${({ theme }) => theme.fonts.mono};
 `;
 
-const SortButton = styled.button`
+const SortButton = styled.button<{ $active: boolean }>`
   display: inline-flex;
   align-items: center;
   gap: ${({ theme }) => theme.spacing[1]};
@@ -173,7 +173,7 @@ const TableHead = styled.thead`
   background: ${({ theme }) => theme.colors.ivory};
 `;
 
-const Th = styled.th`
+const Th = styled.th<{ $sortable?: boolean }>`
   text-align: left;
   padding: ${({ theme }) => `${theme.spacing[3]} ${theme.spacing[4]}`};
   font-weight: ${({ theme }) => theme.fontWeights.semibold};
@@ -203,7 +203,7 @@ const ThContent = styled.span`
   gap: ${({ theme }) => theme.spacing[1]};
 `;
 
-const SortIcon = styled.span`
+const SortIcon = styled.span<{ $visible: boolean }>`
   font-size: 0.625rem;
   opacity: ${({ $visible }) => ($visible ? 1 : 0.3)};
   transition: opacity ${({ theme }) => theme.transitions.fast};
@@ -237,7 +237,7 @@ const BookTitle = styled.span`
   font-weight: ${({ theme }) => theme.fontWeights.medium};
 `;
 
-const Rating = styled.span`
+const Rating = styled.span<{ $value: string }>`
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -342,15 +342,15 @@ export default function Books() {
     } else if (sortBy === "rating-asc") {
       books.sort((a, b) => parseInt(a.rating) - parseInt(b.rating));
     } else if (sortBy === "year-desc") {
-      books.sort((a, b) => parseInt(b.date || 0) - parseInt(a.date || 0));
+      books.sort((a, b) => parseInt(b.date || "0") - parseInt(a.date || "0"));
     } else if (sortBy === "year-asc") {
-      books.sort((a, b) => parseInt(a.date || 0) - parseInt(b.date || 0));
+      books.sort((a, b) => parseInt(a.date || "0") - parseInt(b.date || "0"));
     }
 
     return books;
   }, [currentBooks, topicFilter, sortBy]);
 
-  const toggleSort = (field) => {
+  const toggleSort = (field: string): void => {
     setSortBy((prev) => {
       if (prev === `${field}-desc`) return `${field}-asc`;
       if (prev === `${field}-asc`) return 'none';
@@ -358,13 +358,13 @@ export default function Books() {
     });
   };
 
-  const getSortIcon = (field) => {
+  const getSortIcon = (field: string) => {
     if (sortBy === `${field}-desc`) return faArrowDown;
     if (sortBy === `${field}-asc`) return faArrowUp;
     return faArrowDown;
   };
 
-  const isSortActive = (field) =>
+  const isSortActive = (field: string): boolean =>
     sortBy === `${field}-desc` || sortBy === `${field}-asc`;
 
   return (

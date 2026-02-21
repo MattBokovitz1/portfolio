@@ -1,4 +1,6 @@
-const essays = [
+import type { Essay } from '../types';
+
+const essays: Essay[] = [
   // {
   //   id: 1,
   //   title: "The Hero's Journey",

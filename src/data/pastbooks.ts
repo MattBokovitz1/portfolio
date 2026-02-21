@@ -1,6 +1,8 @@
 // array of books that I have read
 
-const pastBooks = [
+import type { Book } from '../types';
+
+const pastBooks: Book[] = [
   {
     id: 1,
     title: "Aion",

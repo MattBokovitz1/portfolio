@@ -1,4 +1,6 @@
-const potentialBooks = [
+import type { Book } from '../types';
+
+const potentialBooks: Book[] = [
   {
     id: 1,
     title: "Philosophy of Mathematics",

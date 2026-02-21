@@ -106,7 +106,7 @@ const ShimmerOverlay = styled.g`
 
 /* ── Geometry helpers ──────────────────────────────────────────── */
 
-function petalPath(cx, cy, angleDeg, innerR, outerR, spread) {
+function petalPath(cx: number, cy: number, angleDeg: number, innerR: number, outerR: number, spread: number): string {
   const a = (angleDeg * Math.PI) / 180;
   const tipX = cx + Math.cos(a) * outerR;
   const tipY = cy + Math.sin(a) * outerR;
@@ -136,13 +136,17 @@ function petalPath(cx, cy, angleDeg, innerR, outerR, spread) {
           Z`;
 }
 
-function innerPetalPath(cx, cy, angleDeg, innerR, outerR, spread) {
+function innerPetalPath(cx: number, cy: number, angleDeg: number, innerR: number, outerR: number, spread: number): string {
   return petalPath(cx, cy, angleDeg, innerR * 1.15, outerR * 0.72, spread * 0.7);
 }
 
 /* ── Component ─────────────────────────────────────────────────── */
 
-export default function RoseWindow({ size = 400 }) {
+interface RoseWindowProps {
+  size?: number;
+}
+
+export default function RoseWindow({ size = 400 }: RoseWindowProps) {
   const cx = 200;
   const cy = 200;
   const outerR = 160;

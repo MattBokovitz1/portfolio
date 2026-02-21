@@ -1,7 +1,7 @@
 // Polyfill TextEncoder/TextDecoder for JSDOM (needed by react-router v7)
 import { TextEncoder, TextDecoder } from "util";
-global.TextEncoder = TextEncoder;
-global.TextDecoder = TextDecoder;
+
+Object.assign(global, { TextEncoder, TextDecoder });
 
 // jest-dom adds custom matchers for asserting on DOM nodes.
 // allows you to do things like:
