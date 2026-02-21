@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faSquareXTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
-const NavWrapper = styled.header`
+const NavWrapper = styled.header<{ $scrolled: boolean }>`
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -64,7 +64,7 @@ const DesktopNav = styled.nav`
   }
 `;
 
-const NavLink = styled(Link)`
+const NavLink = styled(Link)<{ $active: boolean }>`
   display: flex;
   align-items: center;
   padding: ${({ theme }) => `${theme.spacing[2]} ${theme.spacing[4]}`};
@@ -133,7 +133,7 @@ const MobileMenuButton = styled.button`
   }
 `;
 
-const MobileOverlay = styled.div`
+const MobileOverlay = styled.div<{ $open: boolean }>`
   display: ${({ $open }) => ($open ? "block" : "none")};
   position: fixed;
   inset: 0;
@@ -145,7 +145,7 @@ const MobileOverlay = styled.div`
   }
 `;
 
-const MobileMenu = styled.div`
+const MobileMenu = styled.div<{ $open: boolean }>`
   position: fixed;
   top: 0;
   right: 0;
@@ -190,7 +190,7 @@ const MobileCloseButton = styled.button`
   }
 `;
 
-const MobileNavLink = styled(Link)`
+const MobileNavLink = styled(Link)<{ $active: boolean }>`
   display: block;
   padding: ${({ theme }) => `${theme.spacing[4]} ${theme.spacing[4]}`};
   font-family: ${({ theme }) => theme.fonts.heading};
@@ -270,7 +270,7 @@ function NavBar() {
     };
   }, [mobileOpen]);
 
-  const isActive = (path) => location.pathname === path;
+  const isActive = (path: string): boolean => location.pathname === path;
 
   return (
     <>

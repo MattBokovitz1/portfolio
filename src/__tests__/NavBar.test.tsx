@@ -10,7 +10,7 @@ import NavBar from "../components/NavBar";
  */
 
 describe("NavBar", () => {
-  let user;
+  let user: ReturnType<typeof userEvent.setup>;
 
   beforeEach(() => {
     user = userEvent.setup();

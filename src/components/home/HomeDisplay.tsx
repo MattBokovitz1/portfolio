@@ -87,7 +87,16 @@ const StarField = styled.div`
   overflow: hidden;
 `;
 
-const Star = styled.div`
+interface StarProps {
+  $size?: number;
+  $color?: string;
+  $duration?: string;
+  $delay?: string;
+  $top?: string;
+  $left?: string;
+}
+
+const Star = styled.div<StarProps>`
   position: absolute;
   width: ${({ $size }) => $size || 2}px;
   height: ${({ $size }) => $size || 2}px;
@@ -217,7 +226,7 @@ const HeroSubtitle = styled.p`
 
 /* ────────────────── Ornamental Divider ────────────────── */
 
-const OrnamentDivider = styled.div`
+const OrnamentDivider = styled.div<{ $direction?: string }>`
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -430,7 +439,7 @@ const LegendItem = styled.span`
   }
 `;
 
-const Swatch = styled.span`
+const Swatch = styled.span<{ $color: string }>`
   display: inline-block;
   width: 8px;
   height: 8px;

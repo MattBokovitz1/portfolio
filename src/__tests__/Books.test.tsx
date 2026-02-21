@@ -12,7 +12,7 @@ import potentialBooks from "../data/potentialbooks";
  */
 
 describe("Books component", () => {
-  let user;
+  let user: ReturnType<typeof userEvent.setup>;
 
   beforeEach(() => {
     user = userEvent.setup();
@@ -59,7 +59,7 @@ describe("Books component", () => {
 
     // Click the filter chip (the first button with this topic text)
     const topicElements = screen.getAllByText(topic);
-    const filterChip = topicElements.find((el) => el.tagName === "BUTTON");
+    const filterChip = topicElements.find((el) => el.tagName === "BUTTON")!;
     await user.click(filterChip);
 
     const suffix = expectedCount === 1 ? "book" : "books";
@@ -72,7 +72,7 @@ describe("Books component", () => {
     // Filter by a topic first
     const topic = pastBooks[0].topic;
     const topicElements = screen.getAllByText(topic);
-    const filterChip = topicElements.find((el) => el.tagName === "BUTTON");
+    const filterChip = topicElements.find((el) => el.tagName === "BUTTON")!;
     await user.click(filterChip);
 
     // Switch to want tab
@@ -106,7 +106,7 @@ describe("Books component", () => {
 
   it("toggles rating sort: desc → asc → none", async () => {
     // Use the sort controls button (not the table header)
-    const sortControls = screen.getByText("Sort by:").parentElement;
+    const sortControls = screen.getByText("Sort by:").parentElement!;
     const ratingBtn = within(sortControls).getByText("Rating");
 
     // First click → rating-desc
@@ -128,7 +128,7 @@ describe("Books sorting correctness", () => {
     const user = userEvent.setup();
     renderWithProviders(<Books />);
 
-    const sortControls = screen.getByText("Sort by:").parentElement;
+    const sortControls = screen.getByText("Sort by:").parentElement!;
     const ratingBtn = within(sortControls).getByText("Rating");
     await user.click(ratingBtn); // desc
 
@@ -137,7 +137,7 @@ describe("Books sorting correctness", () => {
       .getAllByText(/^([1-9]|10)$/)
       .filter((el) => el.closest("td"));
 
-    const ratings = ratingCells.map((el) => parseInt(el.textContent, 10));
+    const ratings = ratingCells.map((el) => parseInt(el.textContent!, 10));
 
     // Verify sorted descending
     for (let i = 1; i < ratings.length; i++) {
@@ -149,7 +149,7 @@ describe("Books sorting correctness", () => {
     const user = userEvent.setup();
     renderWithProviders(<Books />);
 
-    const sortControls = screen.getByText("Sort by:").parentElement;
+    const sortControls = screen.getByText("Sort by:").parentElement!;
     const ratingBtn = within(sortControls).getByText("Rating");
     await user.click(ratingBtn); // desc
     await user.click(ratingBtn); // asc
@@ -158,7 +158,7 @@ describe("Books sorting correctness", () => {
       .getAllByText(/^([1-9]|10)$/)
       .filter((el) => el.closest("td"));
 
-    const ratings = ratingCells.map((el) => parseInt(el.textContent, 10));
+    const ratings = ratingCells.map((el) => parseInt(el.textContent!, 10));
 
     for (let i = 1; i < ratings.length; i++) {
       expect(ratings[i]).toBeGreaterThanOrEqual(ratings[i - 1]);
